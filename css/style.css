@@ -49,7 +49,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    border-top: 1px solid #d1d1d1; }
+    border-top: 1px solid #d1d1d1;
+    margin-top: 2rem; }
 
 body {
   font-size: 1.2rem;
@@ -187,7 +188,8 @@ p {
   text-transform: uppercase;
   font-family: "Carrois Gothic", sans-serif;
   box-shadow: 0 0 1.5rem #d1d1d1;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  cursor: pointer; }
   .sec-navigation__button:hover {
     box-shadow: 0 0 1.5rem #b8b8b8;
     transform: translateY(-1px); }
