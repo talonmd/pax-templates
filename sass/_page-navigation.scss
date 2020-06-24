@@ -1,0 +1,42 @@
+.main__sec-navigation {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 5rem;
+  margin-right: 9rem;
+  padding-bottom: 1rem;
+  //box-shadow: 0 0 1.5rem $color-grey-light-1;
+  //transition: all 0.3s;
+  //&:hover {
+  //box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
+  //transform: translateY(-1px);
+  //}
+}
+
+.sec-navigation {
+  &__headline {
+    display: none;
+    // background-color: $color-black;
+    // text-transform: uppercase;
+    // color: $color-white;
+    // text-align: center;
+    // padding: 1rem 2rem;
+    // margin-bottom: 1rem;
+    // font-family: "Carrois Gothic SC", sans-serif;
+    // font-size: 1.4rem;
+    // letter-spacing: 0.1rem;
+  }
+  &__button {
+    margin: 1rem 2rem;
+    border: none;
+    background-color: $color-white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: "Carrois Gothic", sans-serif;
+    box-shadow: 0 0 1.5rem $color-grey-light-1;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
+      transform: translateY(-1px);
+    }
+  }
+}

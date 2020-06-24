@@ -1,0 +1,48 @@
+body {
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 0 1.5rem $color-grey-light-1;
+}
+
+.header {
+  width: 100%;
+  background-color: $color-white;
+  border-right: 0.6rem solid $color-white;
+}
+
+.container {
+  width: 100%;
+  background-color: $color-white-dark;
+  display: flex;
+  border-right: 0.6rem solid $color-light-blue;
+}
+
+.navigation {
+  //background: linear-gradient(to bottom, $color-grey-dark-1, $color-grey-dark-2);
+  background-color: $color-black;
+}
+
+.main {
+  position: relative;
+  &__sec-header {
+    width: 100%;
+    border-bottom: 1px solid $color-grey-light-1;
+    border-top: 1px solid $color-grey-light-1;
+  }
+  &__content {
+    width: 100%;
+    padding: 4rem 5rem;
+  }
+  &__sec-navigation {
+    float: right;
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-grey-light-1;
+  }
+}

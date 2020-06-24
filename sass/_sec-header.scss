@@ -1,0 +1,42 @@
+.sec-header {
+  &__hero-image {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/temp-background.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 15rem;
+  }
+  &__header-box {
+    background-color: $color-white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+  &__headline {
+    padding: 0.54rem 2rem;
+  }
+  &__breadcrumb-box {
+    padding: 1rem 2rem;
+  }
+  &__breadcrumb-list {
+    display: flex;
+    list-style-type: none;
+    border-left: 2px solid $color-grey-light-1;
+    padding-left: 1rem;
+  }
+  &__breadcrumb-item {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid $color-grey-light-1;
+  }
+  &__breadcrumb-link {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-family: "Carrois Gothic SC", sans-serif;
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+    &:hover {
+      text-decoration: underline;
+      color: darken($color-grey-light-2, 10%);
+    }
+  }
+}

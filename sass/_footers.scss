@@ -1,0 +1,23 @@
+.ter-navigation {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    margin: 1rem 2rem;
+  }
+  &__item {
+    padding: 1rem 0;
+  }
+  &__link {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: $color-grey-dark-1;
+    &:hover {
+      text-decoration: underline;
+      color: lighten($color-grey-dark-1, 10%);
+    }
+    &--middle {
+      border-left: 1px solid darken($color-grey-light-1, 10%);
+      border-right: 1px solid darken($color-grey-light-1, 10%);
+    }
+  }
+}
