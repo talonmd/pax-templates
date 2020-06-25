@@ -36,9 +36,9 @@ body {
   &__sec-navigation {
     float: right;
   }
-  &__cards-container {
-    //background-color: pink;
-  }
+  // &__cards-container {
+  //   //background-color: pink;
+  // }
   &__footer {
     position: absolute;
     bottom: 0;
@@ -83,7 +83,7 @@ body {
     letter-spacing: 0.1rem;
   }
   &__info {
-    visibility: hidden;
+    //visibility: hidden;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
