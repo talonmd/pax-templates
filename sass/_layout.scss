@@ -30,11 +30,14 @@ body {
     border-top: 1px solid $color-grey-light-1;
   }
   &__content {
-    width: 100%;
     padding: 4rem 5rem;
+    padding-bottom: 16rem;
   }
   &__sec-navigation {
     float: right;
+  }
+  &__cards-container {
+    //background-color: pink;
   }
   &__footer {
     position: absolute;
@@ -42,8 +45,81 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     border-top: 1px solid $color-grey-light-1;
-    margin-top: 2rem;
+    padding: 2rem 0;
+    flex-direction: column;
+    color: $color-grey-dark-1;
+  }
+}
+
+.card {
+  display: block;
+  background-image: url(../img/apa-class.png);
+  background-size: cover;
+  background-position: center;
+  background-color: $color-white;
+  margin: 2rem;
+  box-shadow: 0 0 1.5rem $color-grey-light-1;
+  width: 25rem;
+  height: 35rem;
+  position: relative;
+  &:hover {
+    box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
+  }
+  &__header {
+    position: absolute;
+    background-color: $color-white;
+    width: 100%;
+    z-index: 2;
+  }
+  &__headline {
+    text-transform: uppercase;
+    color: $color-black;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-family: "Carrois Gothic SC", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+  &__info {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      visibility: revert;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  &__footer {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    min-height: 8rem;
+    clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
+    background-color: $color-white;
+    width: 100%;
+    z-index: 2;
+  }
+  &__button {
+    position: absolute;
+    bottom: 0;
+    margin: 1rem 6rem;
+    border: none;
+    background-color: $color-white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: "Carrois Gothic", sans-serif;
+    box-shadow: 0 0 1.5rem $color-grey-light-1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
+      transform: translateY(-1px);
+    }
   }
 }

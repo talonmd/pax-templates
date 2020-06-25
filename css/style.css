@@ -38,8 +38,8 @@ body {
     border-bottom: 1px solid #d1d1d1;
     border-top: 1px solid #d1d1d1; }
   .main__content {
-    width: 100%;
-    padding: 4rem 5rem; }
+    padding: 4rem 5rem;
+    padding-bottom: 16rem; }
   .main__sec-navigation {
     float: right; }
   .main__footer {
@@ -48,9 +48,72 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     border-top: 1px solid #d1d1d1;
-    margin-top: 2rem; }
+    padding: 2rem 0;
+    flex-direction: column;
+    color: #292929; }
+
+.card {
+  display: block;
+  background-image: url(../img/apa-class.png);
+  background-size: cover;
+  background-position: center;
+  background-color: whitesmoke;
+  margin: 2rem;
+  box-shadow: 0 0 1.5rem #d1d1d1;
+  width: 25rem;
+  height: 35rem;
+  position: relative; }
+  .card:hover {
+    box-shadow: 0 0 1.5rem #b8b8b8; }
+  .card__header {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 100%;
+    z-index: 2; }
+  .card__headline {
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-family: "Carrois Gothic SC", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem; }
+  .card__info {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    height: 100%;
+    width: 100%; }
+    .card__info:hover {
+      visibility: revert;
+      background-color: rgba(0, 0, 0, 0.6); }
+  .card__footer {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    min-height: 8rem;
+    clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
+    background-color: whitesmoke;
+    width: 100%;
+    z-index: 2; }
+  .card__button {
+    position: absolute;
+    bottom: 0;
+    margin: 1rem 6rem;
+    border: none;
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: "Carrois Gothic", sans-serif;
+    box-shadow: 0 0 1.5rem #d1d1d1;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .card__button:hover {
+      box-shadow: 0 0 1.5rem #b8b8b8;
+      transform: translateY(-1px); }
 
 body {
   font-size: 1.2rem;
@@ -126,10 +189,64 @@ p {
     border-radius: 100%; }
 
 .navigation {
-  border-right: 0.6rem solid #8be0e0; }
+  border-right: 0.6rem solid #8be0e0;
+  padding-bottom: 4rem; }
+  .navigation__list {
+    list-style-type: none; }
+    .navigation__list--nested {
+      list-style-type: none;
+      display: none; }
+  .navigation__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0; }
+    .navigation__item:hover {
+      background-color: #262626; }
+    .navigation__item--nested {
+      border-left: 0.8rem solid #292929;
+      padding: 1rem;
+      cursor: pointer;
+      margin: 0.2rem 0; }
+      .navigation__item--nested:hover {
+        background-color: #292929; }
+  .navigation__link {
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-family: "Carrois Gothic SC", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    margin-left: 1rem;
+    width: 100%;
+    height: 100%; }
+    .navigation__link--nested {
+      text-decoration: none;
+      color: whitesmoke;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      letter-spacing: 0.1rem;
+      font-family: "Carrois Gothic SC", sans-serif; }
   .navigation__icon {
-    width: 5rem;
-    height: 5rem; }
+    width: 2.1rem;
+    height: 2.1rem;
+    fill: whitesmoke;
+    margin-bottom: 0.25rem; }
+    .navigation__icon--arrow {
+      width: 4rem;
+      height: 4rem;
+      padding: 0;
+      margin: 0;
+      fill: whitesmoke; }
+      .navigation__icon--arrow-r2 {
+        margin-left: -2rem; }
+
+.rotate {
+  transform: rotate(90deg); }
+
+.none {
+  fill: transparent; }
 
 .sec-header__hero-image {
   background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/temp-background.jpg);
@@ -173,8 +290,7 @@ p {
 .main__sec-navigation {
   display: flex;
   flex-direction: column;
-  margin: 1rem 5rem;
-  margin-right: 9rem;
+  margin: 1rem 0 1rem 4rem;
   padding-bottom: 1rem; }
 
 .sec-navigation__headline {

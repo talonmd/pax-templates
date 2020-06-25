@@ -42,6 +42,12 @@
               <use xlink:href="img/sprite.svg#icon-home"></use>
             </svg>
             <a href="#" class="navigation__link">Home</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <ul class="navigation__list--nested">
             <li class="navigation__item--nested">
@@ -59,6 +65,12 @@
               <use xlink:href="img/sprite.svg#icon-flow-tree"></use>
             </svg>
             <a href="#" class="navigation__link">Races</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <ul class="navigation__list--nested">
             <li class="navigation__item--nested">
@@ -76,12 +88,24 @@
               <use xlink:href="img/sprite.svg#icon-spreadsheet"></use>
             </svg>
             <a href="#" class="navigation__link">Classes</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <li class="navigation__item">
             <svg class="navigation__icon">
               <use xlink:href="img/sprite.svg#icon-book"></use>
             </svg>
             <a href="#" class="navigation__link">Items</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <ul class="navigation__list--nested">
             <li class="navigation__item--nested">
@@ -108,6 +132,12 @@
               <use xlink:href="img/sprite.svg#icon-network"></use>
             </svg>
             <a href="#" class="navigation__link">World</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <ul class="navigation__list--nested">
             <li class="navigation__item--nested">
@@ -131,12 +161,24 @@
               <use xlink:href="img/sprite.svg#icon-unread"></use>
             </svg>
             <a href="#" class="navigation__link">Forum</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <li class="navigation__item">
             <svg class="navigation__icon">
               <use xlink:href="img/sprite.svg#icon-laptop"></use>
             </svg>
             <a href="#" class="navigation__link">Play</a>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
+            <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
+            </svg>
           </li>
           <ul class="navigation__list--nested">
             <li class="navigation__item--nested">
@@ -147,11 +189,6 @@
             </li>
           </ul>
         </ul>
-        <!-- BEGIN NAVIGATION FOOTER -->
-        <footer class="navigation__footer">
-          <p class="navigation__text">&copy; 2020 by Pax. All rights reserved.</p>
-        </footer>
-        <!-- END NAVIGATION FOOTER -->
       </nav>
       <!-- END NAVIGATION -->
       <!-- BEGIN MAIN -->
@@ -195,7 +232,19 @@
           <div class="main__cards-container">
             <h2 class="cards-container__headline">Cards Container Headline</h2>
             <p class="main__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <!-- cards go here -->
+            <!-- BEGIN CARD -->
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__headline">Title of Card</h3>
+              </div>
+              <div class="card__info">
+                <div class="info__abilities"></div>
+                <div class="info__skills"></div>
+                <button class="card__button">Learn More</button>
+              </div>
+              <div class="card__footer"></div>
+            </div>
+            <!-- END CARD -->
           </div>
           <!-- END CARDS CONTAINER -->
           <!-- BEGIN MAIN FOOTER -->
@@ -208,6 +257,7 @@
                 <li class="ter-navigation__item"><a href="#" class="ter-navigation__link">Privacy</a></li>
               </ul>
             </nav>
+            <p class="footer__text">&copy; 2020 by Pax. All rights reservered.</p>
             <!-- END TERTIARY NAVIGATION -->
           </footer>
           <!-- END FOOTER -->
