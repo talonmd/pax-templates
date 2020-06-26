@@ -55,7 +55,7 @@ body {
     color: #292929; }
 
 .card {
-  display: block;
+  display: inline-block;
   background-image: url(../img/apa-class.png);
   background-size: cover;
   background-position: center;
@@ -64,9 +64,11 @@ body {
   box-shadow: 0 0 1.5rem #d1d1d1;
   width: 25rem;
   height: 35rem;
-  position: relative; }
+  position: relative;
+  transition: all 1s; }
   .card:hover {
-    box-shadow: 0 0 1.5rem #b8b8b8; }
+    box-shadow: 0 0 1.5rem #b8b8b8;
+    transform: translateY(-1px); }
   .card__header {
     position: absolute;
     background-color: whitesmoke;
@@ -82,26 +84,31 @@ body {
     letter-spacing: 0.1rem; }
   .card__info {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
     height: 100%;
-    width: 100%; }
+    background-color: rgba(0, 0, 0, 0.6); }
     .card__info:hover {
-      visibility: revert;
+      visibility: visible;
       background-color: rgba(0, 0, 0, 0.6); }
+    .card__info--hidden {
+      visibility: hidden; }
+  .card__description {
+    color: whitesmoke;
+    margin: 0 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: italic; }
   .card__footer {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    min-height: 8rem;
-    clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
-    background-color: whitesmoke;
-    width: 100%;
-    z-index: 2; }
+    display: none; }
   .card__button {
     position: absolute;
-    bottom: 0;
-    margin: 1rem 6rem;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     border: none;
     background-color: whitesmoke;
     padding: 1rem 2rem;
@@ -112,7 +119,7 @@ body {
     cursor: pointer; }
     .card__button:hover {
       box-shadow: 0 0 1.5rem #b8b8b8;
-      transform: translateY(-1px); }
+      transform: translate(-50%, -2px); }
 
 body {
   font-size: 1.2rem;
