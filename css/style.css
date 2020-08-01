@@ -200,8 +200,7 @@ p {
   .navigation__list {
     list-style-type: none; }
     .navigation__list--nested {
-      list-style-type: none;
-      display: none; }
+      list-style-type: none; }
   .navigation__item {
     display: flex;
     align-items: center;
