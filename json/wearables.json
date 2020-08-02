@@ -1,0 +1,26 @@
+{
+  "name": "A Bucket of Disguise",
+  "equipped": false,
+  "bodyArea": "Head",
+  "requirements": "none",
+  "type": "primitive, heavy",
+  "modifiers": {
+    "armour": 10,
+    "PHY": 0,
+    "REF": 0,
+    "INT": 0,
+    "DEX": 0,
+    "skill1": 0,
+    "skill2": 1,
+    "skill3": 0,
+    "skill4": 0,
+    "skill5": 0
+  },
+  "size": "large",
+  "value": 100,
+  "slots": 1,
+  "holsters": 1,
+  "uses": "unlimited",
+  "effects": "none",
+  "description": "The wearer of the bucket truly believes that they are invisible. It is highly sought after, but there is an interesting quality that only someone who wears it discovers. The wearer begins to hear thoughts that are not their own."
+}

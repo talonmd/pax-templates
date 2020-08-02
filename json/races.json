@@ -1,0 +1,15 @@
+{
+  "name": "Bruttu",
+  "commonName": "Orc",
+  "imgurl": "",
+  "location": "Badlands",
+  "climate": "Hot",
+  "description": "The city of Cithde is a rough place to be. If a random degenerates doesn't shank you in an alley, any one of the many gangs could give you a fair amount of trouble. Notoriously cutthroat and brutal to those that oppose them, all of the gangs employ a generous amount of muscle to enforce their territory and their rules. Thankfully, the Bruttu are the perfect race for the job. Bruttu have never had it easy and it's mostly their fault.",
+  "size": "Large (7-10 ft)",
+  "lifespan": "60 Years",
+  "personality": "Angry, Furious, Pissed",
+  "friends": "Goblins",
+  "enemies": "Everyone",
+  "baseStats": [4, -2, -2, 0],
+  "availableClasses": [1, 2, 3, 4]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "All or Nothing Coin",
+  "equipped": false,
+  "type": "normal",
+  "requirements": "none",
+  "slotsReq": 1,
+  "value": 10,
+  "uses": 1,
+  "effects": "none",
+  "description": "Once per day, instead of rolling a d20, you can flip a coin. Heads = critical hit; Tails = critical fail."
+}
