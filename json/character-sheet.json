@@ -31,30 +31,36 @@
   },
   "notes": [
     {
+      "id": 1,
       "title": "I have a secret plan",
       "content": "This is my plan. Read along carefully so that you completley understand. Did you understand?"
     },
     {
+      "id": 2,
       "title": "Reminders!",
       "content": "I need to remember to sell my bow next time we make it to a town! Steal the eye from Ben sometime so I can use it for a prank."
     },
     {
+      "id": 3,
       "title": "Ideas I Have Had",
       "content": "I want to get a cyberkinetic arm that can shoot lazers shaped like sharks. Is that a thing? Steal the eye from Ben's chest and put it in Zack's pack without either of them noticing."
     }
   ],
   "characterLog": [
     {
+      "id": 1,
       "title": "Mission I",
       "details": "I was walking down the street when out of the corner of my eye I saw a pretty little girl looking at me. Then I woke up and remember no girls will ever love me. It was a very sad mission."
     },
     {
+      "id": 2,
       "title": "Mission I",
       "details": "I died."
     }
   ],
   "customAbilities": [
     {
+      "id": 1,
       "name": "Sound-Off, Sound-On",
       "description": "When shooting with a Dexterity-based bow, you can choose whether to attack with the power of song. This makes a jammin' tune, and an extra D4 of damage.",
       "power": 1
