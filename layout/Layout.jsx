@@ -8,14 +8,14 @@ import PageHeader from "../components/PageHeader"
 import PageNavigation from "../components/PageNavigation"
 import Footer from "../components/Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, imagePath, headline, cookieTrail, pageNav }) => {
   return (
     <div className="layout">
       <Header />
       <Navigation />
-      <PageHero />
-      <PageHeader />
-      <PageNavigation />
+      <PageHero imagePath={imagePath} />
+      <PageHeader headline={headline} cookieTrail={cookieTrail} />
+      <PageNavigation pageNav={pageNav} />
       <main class="main-content">{children}</main>
       <Footer />
     </div>

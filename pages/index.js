@@ -4,7 +4,7 @@ import Layout from "../layout/Layout"
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout headline="Home" cookieTrail="" imagePath="" pageNav="home">
       <h2 class="main__headline">Main Content Headline</h2>
       <p class="main__paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

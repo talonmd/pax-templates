@@ -1,23 +1,23 @@
 import React from "react"
 
-const PageHeader = () => {
+const PageHeader = ({ headline, cookieTrail }) => {
   return (
-    <div class="page-header">
-      <h1 class="sec-header__headline">Page Title Headline</h1>
-      <div class="sec-header__breadcrumb-box">
-        <ul class="sec-header__breadcrumb-list">
-          <li class="sec-header__breadcrumb-item">
-            <a href="#" class="sec-header__breadcrumb-link">
+    <div className="page-header">
+      <h1 className="page-header__headline">{headline}</h1>
+      <div className="page-header__breadcrumb-box">
+        <ul className="page-header__breadcrumb-list">
+          <li className="page-header__breadcrumb-item">
+            <a href="#" className="page-header__breadcrumb-link">
               Page Title
             </a>
           </li>
-          <li class="sec-header__breadcrumb-item">
-            <a href="#" class="sec-header__breadcrumb-link">
+          <li className="page-header__breadcrumb-item">
+            <a href="#" className="page-header__breadcrumb-link">
               Page Title
             </a>
           </li>
-          <li class="sec-header__breadcrumb-item">
-            <a href="#" class="sec-header__breadcrumb-link">
+          <li className="page-header__breadcrumb-item">
+            <a href="#" className="page-header__breadcrumb-link">
               Page Title
             </a>
           </li>
