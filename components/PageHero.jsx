@@ -2,8 +2,8 @@ import React from "react"
 
 const PageHero = () => {
   return (
-    <div class="page-header">
-      <div class="sec-header__hero-image"></div>
+    <div className="page-header">
+      <div className="sec-header__hero-image"></div>
     </div>
   )
 }
