@@ -2,7 +2,7 @@ import React from "react"
 
 const PageHeader = () => {
   return (
-    <div class="page-headline">
+    <div class="page-header">
       <h1 class="sec-header__headline">Page Title Headline</h1>
       <div class="sec-header__breadcrumb-box">
         <ul class="sec-header__breadcrumb-list">

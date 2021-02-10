@@ -7,8 +7,8 @@
   grid-template-rows: 7rem 16rem 7rem auto auto;
   grid-template-areas:
     "navigation header header"
-    "navigation pageheader pageheader"
-    "navigation pagenavigation pageheadline"
+    "navigation pagehero pagehero"
+    "navigation pagenavigation pageheader"
     "navigation pagenavigation maincontent"
     "navigation pagenavigation footer";
 }
@@ -21,17 +21,18 @@
 .navigation {
   grid-area: navigation;
   background-color: $color-black;
+  border-right: 0.6rem solid $color-light-blue;
 }
 
-.page-header {
-  grid-area: pageheader;
+.page-hero {
+  grid-area: pagehero;
   background-color: gray;
   border-bottom: $border;
   border-top: $border;
 }
 
-.page-headline {
-  grid-area: pageheadline;
+.page-header {
+  grid-area: pageheader;
   border-bottom: $border;
   display: flex;
   align-items: center;
@@ -50,9 +51,5 @@
 
 .footer {
   grid-area: footer;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-top: $border;
 }
