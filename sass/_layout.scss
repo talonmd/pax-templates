@@ -1,48 +1,56 @@
-body {
-  max-width: 1200px;
+.layout {
+  max-width: 88vw;
   margin: 2rem auto;
   box-shadow: 0 0 1.5rem $color-grey-light-1;
+  display: grid;
+  grid-template-columns: auto 20rem 1fr;
+  grid-template-rows: 10rem 20rem auto auto;
+  grid-template-areas:
+    "navigation header header"
+    "navigation pageheader pageheader"
+    "navigation pagenavigation maincontent"
+    "navigation pagenavigation footer";
+  background-color: blue;
 }
 
 .header {
   width: 100%;
   background-color: $color-white;
-  border-right: 0.6rem solid $color-white;
-}
-
-.container {
-  width: 100%;
-  background-color: $color-white-dark;
-  display: flex;
-  border-right: 0.6rem solid $color-light-blue;
+  // border-right: 0.6rem solid $color-white;
+  background-color: red;
+  grid-area: header;
 }
 
 .navigation {
+  grid-area: navigation;
   //background: linear-gradient(to bottom, $color-grey-dark-1, $color-grey-dark-2);
   background-color: $color-black;
 }
 
+.page-header {
+  grid-area: pageheader;
+  width: 100%;
+  border-bottom: 1px solid $color-grey-light-1;
+  border-top: 1px solid $color-grey-light-1;
+  background-color: orange;
+}
+
+.page-navigation {
+  grid-area: pagenavigation;
+  background-color: pink;
+}
+
 .main {
   position: relative;
-  &__sec-header {
-    width: 100%;
-    border-bottom: 1px solid $color-grey-light-1;
-    border-top: 1px solid $color-grey-light-1;
-  }
-  &__content {
-    padding: 4rem 5rem;
-    padding-bottom: 16rem;
-  }
-  &__sec-navigation {
-    float: right;
-  }
+  background-color: green;
+  grid-area: maincontent;
+
   // &__cards-container {
   //   //background-color: pink;
   // }
   &__footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    grid-area: footer;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -50,12 +58,13 @@ body {
     padding: 2rem 0;
     flex-direction: column;
     color: $color-grey-dark-1;
+    background-color: yellow;
   }
 }
 
 .card {
   display: inline-block;
-  background-image: url(../img/apa-class.png);
+  //background-image: url(../img/apa-class.png);
   background-size: cover;
   background-position: center;
   background-color: $color-white;

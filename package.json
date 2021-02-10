@@ -1,14 +1,16 @@
 {
-  "name": "trillo",
-  "version": "1.0.0",
-  "description": "trillo app",
-  "main": "index.js",
+  "name": "testing-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "talon",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^4.5.3"
+  "dependencies": {
+    "next": "10.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "^1.32.6"
   }
 }
