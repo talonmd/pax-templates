@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer class="main__footer">
+    <footer class="footer">
       <nav class="footer__ter-navigation">
         <ul class="ter-navigation__list">
           <li class="ter-navigation__item">

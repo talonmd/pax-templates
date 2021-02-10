@@ -1,149 +1,58 @@
 .layout {
   max-width: 88vw;
   margin: 2rem auto;
-  box-shadow: 0 0 1.5rem $color-grey-light-1;
+  box-shadow: $box-shadow;
   display: grid;
   grid-template-columns: auto 20rem 1fr;
-  grid-template-rows: 10rem 20rem auto auto;
+  grid-template-rows: 7rem 16rem 7rem auto auto;
   grid-template-areas:
     "navigation header header"
     "navigation pageheader pageheader"
+    "navigation pagenavigation pageheadline"
     "navigation pagenavigation maincontent"
     "navigation pagenavigation footer";
-  background-color: blue;
 }
 
 .header {
-  width: 100%;
-  background-color: $color-white;
-  // border-right: 0.6rem solid $color-white;
-  background-color: red;
   grid-area: header;
+  background-color: $color-white;
 }
 
 .navigation {
   grid-area: navigation;
-  //background: linear-gradient(to bottom, $color-grey-dark-1, $color-grey-dark-2);
   background-color: $color-black;
 }
 
 .page-header {
   grid-area: pageheader;
-  width: 100%;
-  border-bottom: 1px solid $color-grey-light-1;
-  border-top: 1px solid $color-grey-light-1;
-  background-color: orange;
+  background-color: gray;
+  border-bottom: $border;
+  border-top: $border;
+}
+
+.page-headline {
+  grid-area: pageheadline;
+  border-bottom: $border;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
 }
 
 .page-navigation {
   grid-area: pagenavigation;
-  background-color: pink;
+  background-color: darken($color-white, 5%);
 }
 
-.main {
-  position: relative;
-  background-color: green;
+.main-content {
   grid-area: maincontent;
-
-  // &__cards-container {
-  //   //background-color: pink;
-  // }
-  &__footer {
-    grid-area: footer;
-
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid $color-grey-light-1;
-    padding: 2rem 0;
-    flex-direction: column;
-    color: $color-grey-dark-1;
-    background-color: yellow;
-  }
+  padding: 2rem 4rem;
 }
 
-.card {
-  display: inline-block;
-  //background-image: url(../img/apa-class.png);
-  background-size: cover;
-  background-position: center;
-  background-color: $color-white;
-  margin: 2rem;
-  box-shadow: 0 0 1.5rem $color-grey-light-1;
-  width: 25rem;
-  height: 35rem;
-  position: relative;
-  transition: all 1s;
-  &:hover {
-    box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
-    transform: translateY(-1px);
-  }
-  &__header {
-    position: absolute;
-    background-color: $color-white;
-    width: 100%;
-    z-index: 2;
-  }
-  &__headline {
-    text-transform: uppercase;
-    color: $color-black;
-    text-align: center;
-    padding: 0.8rem 0;
-    font-family: "Carrois Gothic SC", sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-  }
-  &__info {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    &:hover {
-      visibility: visible;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    &--hidden {
-      visibility: hidden;
-    }
-  }
-  &__description {
-    color: $color-white;
-    margin: 0 2rem;
-    text-align: center;
-    font-size: 1.6rem;
-    font-style: italic;
-  }
-  &__footer {
-    display: none;
-    // position: absolute;
-    // bottom: 0;
-    // min-height: 8rem;
-    // clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
-    // background-color: $color-white;
-    // width: 100%;
-    // z-index: 2;
-  }
-  &__button {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: none;
-    background-color: $color-white;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    font-family: "Carrois Gothic", sans-serif;
-    box-shadow: 0 0 1.5rem $color-grey-light-1;
-    transition: all 0.3s;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: 0 0 1.5rem darken($color-grey-light-1, 10%);
-      transform: translate(-50%, -2px);
-    }
-  }
+.footer {
+  grid-area: footer;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: $border;
 }
