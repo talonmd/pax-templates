@@ -1,24 +1,26 @@
 import React from "react"
 
+import AvariceLogo from "../assets/AvariceLogo"
+
 const Header = () => {
   return (
-    <header class="header">
-      <div class="header__left-side">
-        <div class="header__logo">
-          <img src="/img/avarice-logotype-black.svg" alt="pax logo" class="header__logo-image" />
-          <span class="header__logo-headline">avarice</span>
-        </div>
+    <header className="header">
+      <div className="header__left-side">
+        <AvariceLogo className="header__logo" />
+        <h1 className="header__logotype">avarice</h1>
       </div>
 
-      <div class="header__right-side">
-        <div class="header__notifications">
-          {/* <svg class="header__notifications-icon">
-          <use xlink:href="img/sprite.svg#icon-chat"></use>
-        </svg> */}
-          <span class="header__notifications-alert">4</span>
+      <div className="header__right-side">
+        <div className="header__search-bar">
+          <input type="text" className="header__search-bar-input" placeholder="search..." />
+          {/* TO DO - add a search icon here */}
         </div>
-        <div class="header__profile">
-          <img src="/img/temp-user.jpg" alt="user profile photo" class="header__profile-icon" />
+        <div className="header__notifications">
+          <img className="header__notifications-icon" src="assets/svg/chat.svg" />
+          <span className="header__notifications-alert">4</span>
+        </div>
+        <div className="header__profile">
+          <img src="/img/temp-user.jpg" alt="user profile photo" className="header__profile-icon" />
         </div>
       </div>
     </header>
