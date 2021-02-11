@@ -3,196 +3,143 @@ import React from "react"
 const Navigation = () => {
   return (
     <nav class="navigation">
+      <span className="navigation__hamburger-icon">&#9776;</span>
       <ul class="navigation__list">
         <li class="navigation__item">
-          <img src="/assets/svg/home.svg" alt="" className="navigation__icon" />
+          {/* <img src="/assets/svg/home.svg" alt="" className="navigation__icon" /> */}
           <a href="#" class="navigation__link">
             Get Started
           </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-                <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-        </li>
-        {/* <ul class="navigation__list--nested">
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              About / Rules
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Pricing / Plans
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Races / Classes
-            </a>
-          </li>
-        </ul> */}
-        <li class="navigation__item">
-          <img src="/assets/svg/flow-tree.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Rules
-          </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-                <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-        </li>
-        {/* <ul class="navigation__list--nested">
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Playable
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Unplayable
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Beasts
-            </a>
-          </li>
-        </ul> */}
-        <li class="navigation__item">
-          <img src="/assets/svg/spreadsheet.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Explore
-          </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-                <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-        </li>
-        <li class="navigation__item">
-          <img src="/assets/svg/book.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Digital Tools
-          </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-                <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-        </li>
-        {/* <ul class="navigation__list--nested">
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Weapons
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Armour
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Items
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Consumables
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Currency
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Friends
-            </a>
-          </li>
-        </ul> */}
-        <li class="navigation__item">
-          <img src="/assets/svg/network.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Community
-          </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-                <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-        </li>
-        {/* <ul class="navigation__list--nested">
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              History
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Organizations
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Map
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              Places
-            </a>
-          </li>
-          <li class="navigation__item--nested">
-            <a href="#" class="navigation__link--nested">
-              People
-            </a>
-          </li>
-        </ul> */}
-        {/* <li class="navigation__item">
-          <img src="/assets/svg/unread.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Forum
-          </a>
-           <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-          <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
-        </li>
-        <li class="navigation__item">
-          <img src="/assets/svg/laptop.svg" alt="" className="navigation__icon" />
-          <a href="#" class="navigation__link">
-            Play
-          </a>
-         <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> 
-          <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
-                  <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg>
         </li>
         <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
-              Sheets
+              Quickstart Rules
             </a>
           </li>
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
-              Database
+              Resources
             </a>
           </li>
-        </ul> */}
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <li class="navigation__item">
+          {/* <img src="/assets/svg/flow-tree.svg" alt="" className="navigation__icon" /> */}
+          <a href="#" class="navigation__link">
+            Rules
+          </a>
+        </li>
+        <ul class="navigation__list--nested">
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Player
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              CC
+            </a>
+          </li>
+        </ul>
+        <li class="navigation__item">
+          {/* <img src="/assets/svg/spreadsheet.svg" alt="" className="navigation__icon" /> */}
+          <a href="#" class="navigation__link">
+            Explore Avarice
+          </a>
+        </li>
+        <ul class="navigation__list--nested">
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Races
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Classes
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              S.U.R.O.N.I.S.
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              World
+            </a>
+          </li>
+        </ul>
+        <li class="navigation__item">
+          {/* <img src="/assets/svg/book.svg" alt="" className="navigation__icon" /> */}
+          <a href="#" class="navigation__link">
+            Digital Tools
+          </a>
+        </li>
+        <ul class="navigation__list--nested">
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Avarice Sheets
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Avarice Database
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              PDFS
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Ebooks
+            </a>
+          </li>
+        </ul>
+        <li class="navigation__item">
+          {/* <img src="/assets/svg/unread.svg" alt="" className="navigation__icon" /> */}
+          <a href="#" class="navigation__link">
+            Community
+          </a>
+        </li>
+        <ul class="navigation__list--nested">
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Blog
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Forum
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Writers Guild
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Social Media
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Q&amp;A
+            </a>
+          </li>
+          <li class="navigation__item--nested">
+            <a href="#" class="navigation__link--nested">
+              Help &amp; Support
+            </a>
+          </li>
+        </ul>
       </ul>
     </nav>
   )

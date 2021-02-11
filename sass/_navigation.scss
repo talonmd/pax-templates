@@ -1,5 +1,16 @@
 .navigation {
   padding-bottom: 4rem;
+  &__hamburger-icon {
+    color: $color-white;
+    font-size: 3.5rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: right;
+    cursor: pointer;
+    &--open {
+      transform: rotateY(90deg);
+    }
+  }
   &__list {
     list-style-type: none;
     &--nested {
@@ -10,6 +21,7 @@
   &__item {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding: 0.8rem 1rem;
     margin: 1rem 0;
@@ -32,15 +44,18 @@
     text-transform: uppercase;
     font-family: "Carrois Gothic SC", sans-serif;
     font-size: 1.6rem;
+    line-height: 0;
     letter-spacing: 0.2rem;
     margin-left: 1rem;
     width: 100%;
     height: 100%;
+    padding: 1rem 0.5rem;
     &--nested {
       text-decoration: none;
       color: $color-white;
       text-transform: uppercase;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      margin-left: 2.5rem;
       letter-spacing: 0.1rem;
       font-family: "Carrois Gothic SC", sans-serif;
     }
