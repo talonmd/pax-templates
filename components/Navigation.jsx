@@ -5,11 +5,9 @@ const Navigation = () => {
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-home"></use>
-                </svg> */}
+          <img src="/assets/svg/home.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
-            Home
+            Get Started
           </a>
           {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
@@ -18,29 +16,27 @@ const Navigation = () => {
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
                 </svg> */}
         </li>
-        <ul class="navigation__list--nested">
+        {/* <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
-              About
+              About / Rules
             </a>
           </li>
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
-              Rules
+              Pricing / Plans
             </a>
           </li>
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
-              Blog
+              Races / Classes
             </a>
           </li>
-        </ul>
+        </ul> */}
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-flow-tree"></use>
-                </svg> */}
+          <img src="/assets/svg/flow-tree.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
-            Races
+            Rules
           </a>
           {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
@@ -49,7 +45,7 @@ const Navigation = () => {
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
                 </svg> */}
         </li>
-        <ul class="navigation__list--nested">
+        {/* <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
               Playable
@@ -65,13 +61,11 @@ const Navigation = () => {
               Beasts
             </a>
           </li>
-        </ul>
+        </ul> */}
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-spreadsheet"></use>
-                </svg> */}
+          <img src="/assets/svg/spreadsheet.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
-            Classes
+            Explore
           </a>
           {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
@@ -81,11 +75,9 @@ const Navigation = () => {
                 </svg> */}
         </li>
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-book"></use>
-                </svg> */}
+          <img src="/assets/svg/book.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
-            Items
+            Digital Tools
           </a>
           {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
@@ -94,7 +86,7 @@ const Navigation = () => {
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
                 </svg> */}
         </li>
-        <ul class="navigation__list--nested">
+        {/* <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
               Weapons
@@ -125,13 +117,11 @@ const Navigation = () => {
               Friends
             </a>
           </li>
-        </ul>
+        </ul> */}
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-network"></use>
-                </svg> */}
+          <img src="/assets/svg/network.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
-            World
+            Community
           </a>
           {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
@@ -140,7 +130,7 @@ const Navigation = () => {
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
                 </svg> */}
         </li>
-        <ul class="navigation__list--nested">
+        {/* <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
             <a href="#" class="navigation__link--nested">
               History
@@ -166,34 +156,30 @@ const Navigation = () => {
               People
             </a>
           </li>
-        </ul>
-        <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-unread"></use>
-                </svg> */}
+        </ul> */}
+        {/* <li class="navigation__item">
+          <img src="/assets/svg/unread.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
             Forum
           </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
+           <svg class="navigation__icon--arrow navigation__icon--arrow-r1 none">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
+                </svg>
+          <svg class="navigation__icon--arrow navigation__icon--arrow-r2 none">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
+                </svg>
         </li>
         <li class="navigation__item">
-          {/* <svg class="navigation__icon">
-                  <use xlink:href="img/sprite.svg#icon-laptop"></use>
-                </svg> */}
+          <img src="/assets/svg/laptop.svg" alt="" className="navigation__icon" />
           <a href="#" class="navigation__link">
             Play
           </a>
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
+         <svg class="navigation__icon--arrow navigation__icon--arrow-r1">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
-          {/* <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
+                </svg> 
+          <svg class="navigation__icon--arrow navigation__icon--arrow-r2">
                   <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
-                </svg> */}
+                </svg>
         </li>
         <ul class="navigation__list--nested">
           <li class="navigation__item--nested">
@@ -206,7 +192,7 @@ const Navigation = () => {
               Database
             </a>
           </li>
-        </ul>
+        </ul> */}
       </ul>
     </nav>
   )
