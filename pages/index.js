@@ -9,121 +9,44 @@ export default function Home() {
     <Layout headline="Index" cookieTrail="" imagePath="" pageNav="home">
       <PageNavigation>
         <ul>
-          <li>Quickstart Rules</li>
-
+          <li>Get Started</li>
           <ul>
-            <li>Rules</li>
+            <li>Quickstart Rules</li>
+            <li>Resources</li>
+            <li>Pricing</li>
+          </ul>
+          <li>Rules</li>
+          <ul>
+            <li>Player Rules</li>
+            <li>CC Rules</li>
+          </ul>
+          <li>Explore Avarice</li>
+          <ul>
             <li>Races</li>
             <li>Classes</li>
             <li>SURONIS</li>
+            <li>World</li>
           </ul>
-          <li>Resources</li>
+          <li>Digital Tools</li>
           <ul>
             <li>Avarice Sheets</li>
+            <li>Avarice Database</li>
             <li>PDFS</li>
+            <li>Ebooks</li>
           </ul>
-          <li>Pricing</li>
+          <li>Community</li>
+          <ul>
+            <li>Blog</li>
+            <li>Forum</li>
+            <li>Writers Guild</li>
+            <li>Social Media</li>
+            <li>Q&amp;A</li>
+            <li>Help &amp; Support</li>
+          </ul>
         </ul>
       </PageNavigation>
       <PageContent>
-        <h2 class="main__headline">Main Content Headline</h2>
-        <p class="main__paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-        </p>
-        {/* <svg style="fill: black">
-                <use xlink:href="/img/avarice-logotype-black.svg"></use>
-              </svg> */}
-        <h3>H3 Headline Example</h3>
-        <h4>H4 Headline Example</h4>
-        <h5>H5 Headline Example</h5>
-        <h6>H6 Headline Example</h6>
-        <button>Button Example</button>
-        <a href="#">Text link example</a>
-        <p>UL Example</p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
-        <p>OL Example</p>
-        <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ol>
-        {/* <figure>
-                <img src="./img/apa-class.png" alt="test" />
-                <figcaption>Figure caption example</figcaption>
-              </figure> */}
-        <blockquote>Blockquote Example</blockquote>
-        <p class="main__paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-        </p>
-        <div class="main__cards-container">
-          <h2 class="cards-container__headline">Cards Container Headline</h2>
-          <p class="main__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-          </p>
-
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__headline">Title of Card</h3>
-            </div>
-            <div class="card__info card__info--hidden">
-              <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ...
-              </p>
-              <button class="card__button">Learn More</button>
-            </div>
-            <div class="card__footer"></div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__headline">Title of Card</h3>
-            </div>
-            <div class="card__info">
-              <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ...
-              </p>
-              <button class="card__button">Learn More</button>
-            </div>
-            <div class="card__footer"></div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h3 class="card__headline">Title of Card</h3>
-            </div>
-            <div class="card__info card__info--hidden">
-              <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ...
-              </p>
-              <button class="card__button">Learn More</button>
-            </div>
-            <div class="card__footer"></div>
-          </div>
-        </div>
+        <h2>Main Content Headline</h2>
       </PageContent>
     </Layout>
   )
