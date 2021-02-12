@@ -126,11 +126,6 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="navigation__item--nested">
-            <Link href="/community/qa">
-              <a className="navigation__link--nested">Q&amp;A</a>
-            </Link>
-          </li>
-          <li className="navigation__item--nested">
             <Link href="/community/support">
               <a className="navigation__link--nested">Help &amp; Support</a>
             </Link>
