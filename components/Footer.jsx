@@ -7,19 +7,19 @@ const Footer = () => {
       <nav className="footer__navigation">
         <ul className="footer__navigation-list">
           <li className="footer__navigation-item">
-            <Link href="/about">
+            <Link href="/home/about">
               <a className="footer__navigation-link">About Us</a>
             </Link>
           </li>
           <li className="footer__navigation-item">
-            <Link href="/terms-and-privacy">
+            <Link href="/home/terms-and-privacy">
               <a className="footer__navigation-link footer__navigation-link--middle">
                 Terms &amp; Privacy
               </a>
             </Link>
           </li>
           <li className="footer__navigation-item">
-            <Link href="/contact">
+            <Link href="/home/contact">
               <a className="footer__navigation-link">Contact Us</a>
             </Link>
           </li>

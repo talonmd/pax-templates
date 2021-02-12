@@ -7,141 +7,169 @@ const Navigation = () => {
   return (
     <>
       <div className="closed-bar">
-        <span className="navigation__hamburger-icon" onClick={() => setIsOpen(!isOpen)}>
+        <span
+          className="navigation__hamburger-icon"
+          onClick={() => {
+            setIsOpen(!isOpen)
+          }}
+        >
           &#9776;
         </span>
       </div>
       <nav className={`navigation ${!isOpen ? "closed" : ""}`}>
         <ul className="navigation__list">
-          <li className="navigation__item">
-            <Link href="/get-started">
+          <Link href="/get-started">
+            <li className="navigation__item">
               <a className="navigation__link">Get Started</a>
-            </Link>
-          </li>
+            </li>
+          </Link>
+
           <ul className="navigation__list--nested">
-            <li className="navigation__item--nested">
-              <Link href="/get-started/about-avarice">
+            <Link href="/get-started/about-avarice">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">About Avarice</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/get-started/quickstart-rules">
+              </li>
+            </Link>
+
+            <Link href="/get-started/quickstart-rules">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Quickstart Rules</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/get-started/resources">
+              </li>
+            </Link>
+
+            <Link href="/get-started/resources">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Resources</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/get-started/pricing">
+              </li>
+            </Link>
+
+            <Link href="/get-started/pricing">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Pricing</a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
-          <li className="navigation__item">
-            <Link href="/rules">
+
+          <Link href="/rules">
+            <li className="navigation__item">
               <a className="navigation__link">Rules</a>
-            </Link>
-          </li>
+            </li>
+          </Link>
+
           <ul className="navigation__list--nested">
-            <li className="navigation__item--nested">
-              <Link href="/rules/player-rules">
+            <Link href="/rules/player-rules">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Player Rules</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/rules/cc-rules">
+              </li>
+            </Link>
+
+            <Link href="/rules/cc-rules">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">CC Rules</a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
-          <li className="navigation__item">
-            <Link href="/explore">
+
+          <Link href="/explore">
+            <li className="navigation__item">
               <a className="navigation__link">Explore Avarice</a>
-            </Link>
-          </li>
+            </li>
+          </Link>
+
           <ul className="navigation__list--nested">
-            <li className="navigation__item--nested">
-              <Link href="/explore/races">
+            <Link href="/explore/races">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Races</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/explore/classes">
+              </li>
+            </Link>
+
+            <Link href="/explore/classes">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Classes</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/explore/suronis">
+              </li>
+            </Link>
+
+            <Link href="/explore/suronis">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">S.U.R.O.N.I.S.</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/explore/world">
+              </li>
+            </Link>
+
+            <Link href="/explore/world">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">World</a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
-          <li className="navigation__item">
-            <Link href="/digital-tools">
+
+          <Link href="/digital-tools">
+            <li className="navigation__item">
               <a className="navigation__link">Digital Tools</a>
-            </Link>
-          </li>
+            </li>
+          </Link>
+
           <ul className="navigation__list--nested">
-            <li className="navigation__item--nested">
-              <Link href="/digital-tools/avarice-sheets">
+            <Link href="/digital-tools/avarice-sheets">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Avarice Sheets</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/digital-tools/avarice-database">
-                <a className="navigation__link--nested">Avarice Database</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/digital-tools/pdfs">
-                <a className="navigation__link--nested">PDFS</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/digital-tools/ebooks">
-                <a className="navigation__link--nested">Ebooks</a>
-              </Link>
-            </li>
-          </ul>
-          <li className="navigation__item">
-            <Link href="/community">
-              <a className="navigation__link">Community</a>
+              </li>
             </Link>
-          </li>
+
+            <Link href="/digital-tools/avarice-database">
+              <li className="navigation__item--nested">
+                <a className="navigation__link--nested">Avarice Database</a>
+              </li>
+            </Link>
+
+            <Link href="/digital-tools/pdfs">
+              <li className="navigation__item--nested">
+                <a className="navigation__link--nested">PDFS</a>
+              </li>
+            </Link>
+
+            <Link href="/digital-tools/ebooks">
+              <li className="navigation__item--nested">
+                <a className="navigation__link--nested">Ebooks</a>
+              </li>
+            </Link>
+          </ul>
+
+          <Link href="/community">
+            <li className="navigation__item">
+              <a className="navigation__link">Community</a>
+            </li>
+          </Link>
+
           <ul className="navigation__list--nested">
-            <li className="navigation__item--nested">
-              <Link href="/community/blog">
+            <Link href="/community/blog">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Blog</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/community/forum">
+              </li>
+            </Link>
+
+            <Link href="/community/forum">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Forum</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/community/writers-guild">
+              </li>
+            </Link>
+
+            <Link href="/community/writers-guild">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Writers Guild</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/community/social-media">
+              </li>
+            </Link>
+
+            <Link href="/community/social-media">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Social Media</a>
-              </Link>
-            </li>
-            <li className="navigation__item--nested">
-              <Link href="/community/support">
+              </li>
+            </Link>
+
+            <Link href="/community/support">
+              <li className="navigation__item--nested">
                 <a className="navigation__link--nested">Help &amp; Support</a>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </ul>
       </nav>
