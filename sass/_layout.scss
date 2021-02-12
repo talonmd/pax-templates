@@ -1,16 +1,16 @@
 .layout {
-  max-width: 88vw;
+  max-width: 95vw;
   margin: 2rem auto;
   box-shadow: $box-shadow;
   display: grid;
-  grid-template-columns: minmax(25rem, max-content) 1fr max-content;
+  grid-template-columns: auto 7rem 1fr max-content;
   grid-template-rows: 7rem 16rem $pageheader-height auto auto;
   grid-template-areas:
-    "navigation header header"
-    "navigation pagehero pagehero"
-    "navigation pageheader pageheader"
-    "navigation pagecontent pagenavigation"
-    "navigation footer footer";
+    "navigation closedbar header header"
+    "navigation closedbar pagehero pagehero"
+    "navigation closedbar pageheader pageheader"
+    "navigation closedbar pagecontent pagenavigation"
+    "navigationfooter navigationfooter footer footer";
 }
 
 .header {
@@ -21,7 +21,20 @@
 .navigation {
   grid-area: navigation;
   background-color: $color-black;
+}
+
+.navigation-footer {
+  grid-area: navigationfooter;
+  background-color: $color-black;
   border-right: 0.6rem solid $color-light-blue;
+}
+
+.closed-bar {
+  grid-area: closedbar;
+  background-color: $color-black;
+  border-right: 0.6rem solid $color-light-blue;
+  display: flex;
+  justify-content: center;
 }
 
 .page-hero {

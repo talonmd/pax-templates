@@ -1,10 +1,19 @@
 .navigation {
   padding-bottom: 4rem;
+  overflow: hidden;
+  width: 19rem;
+  transition: width 1s;
+  &.closed {
+    width: 0;
+  }
+  &.closed &__list {
+    opacity: 0;
+  }
   &__hamburger-icon {
     color: $color-white;
-    font-size: 3.5rem;
+    font-size: 4rem;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     text-align: right;
     cursor: pointer;
     &--open {
@@ -12,10 +21,13 @@
     }
   }
   &__list {
+    width: 19rem;
+    margin-top: 7rem;
+    opacity: 1;
+    transition: opacity 0.5s;
     list-style-type: none;
     &--nested {
       list-style-type: none;
-      //display: none;
     }
   }
   &__item {
@@ -78,12 +90,4 @@
       }
     }
   }
-}
-
-.rotate {
-  transform: rotate(90deg);
-}
-
-.none {
-  fill: transparent;
 }

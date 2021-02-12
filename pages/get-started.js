@@ -15,6 +15,7 @@ export default () => {
         <ul>
           <li>Quickstart Rules</li>
           <ul>
+            <li>About Avarice</li>
             <li>Rules</li>
             <li>Races</li>
             <li>Classes</li>

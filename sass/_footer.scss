@@ -23,8 +23,7 @@
       text-decoration: none;
       color: $color-grey-dark-1;
       &:hover {
-        text-decoration: underline;
-        color: lighten($color-grey-dark-1, 10%);
+        color: darken($color-grey-dark-1, 80%);
       }
       &--middle {
         border-left: 1px solid darken($color-grey-light-1, 10%);
