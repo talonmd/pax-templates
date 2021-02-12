@@ -15,8 +15,7 @@ const Layout = ({ children, imagePath, headline, cookieTrail, pageNav }) => {
       <Navigation />
       <PageHero imagePath={imagePath} />
       <PageHeader headline={headline} cookieTrail={cookieTrail} />
-      <PageNavigation pageNav={pageNav} />
-      <main class="main-content">{children}</main>
+      {children}
       <Footer />
     </div>
   )

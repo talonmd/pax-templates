@@ -1,19 +1,7 @@
 .page-header {
-  &__hero-image {
-    // background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/temp-background.jpg);
-    background-size: cover;
-    background-position: top;
-    height: 15rem;
-  }
-  &__header-box {
-    background-color: $color-white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-  }
-  &__headline {
-    padding: 0.54rem 2rem;
-  }
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
   &__breadcrumb-box {
     padding: 1rem 2rem;
   }

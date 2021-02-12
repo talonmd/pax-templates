@@ -3,14 +3,14 @@
   margin: 2rem auto;
   box-shadow: $box-shadow;
   display: grid;
-  grid-template-columns: minmax(25rem, max-content) 20rem 1fr;
-  grid-template-rows: 7rem 16rem 7rem auto auto;
+  grid-template-columns: minmax(25rem, max-content) 1fr max-content;
+  grid-template-rows: 7rem 16rem $pageheader-height auto auto;
   grid-template-areas:
     "navigation header header"
     "navigation pagehero pagehero"
-    "navigation pagenavigation pageheader"
-    "navigation pagenavigation maincontent"
-    "navigation pagenavigation footer";
+    "navigation pageheader pageheader"
+    "navigation pagecontent pagenavigation"
+    "navigation footer footer";
 }
 
 .header {
@@ -34,19 +34,18 @@
 .page-header {
   grid-area: pageheader;
   border-bottom: $border;
-  display: flex;
-  align-items: center;
-  text-transform: lowercase;
+  padding: 0.54rem 2rem;
 }
 
 .page-navigation {
   grid-area: pagenavigation;
-  background-color: darken($color-white, 5%);
+  background-color: darken($color-white, 4%);
+  padding-top: 2rem;
 }
 
-.main-content {
-  grid-area: maincontent;
-  padding: 2rem 4rem;
+.page-content {
+  grid-area: pagecontent;
+  padding: 2rem;
 }
 
 .footer {
