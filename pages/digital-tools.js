@@ -12,9 +12,21 @@ export default () => {
       <PageNavigation>
         <ul>
           <li>Avarice Sheets</li>
+          <ul>
+            <li>About</li>
+          </ul>
           <li>Avarice Database</li>
+          <ul>
+            <li>About</li>
+          </ul>
           <li>PDFS</li>
+          <ul>
+            <li>PDF #1</li>
+          </ul>
           <li>Ebooks</li>
+          <ul>
+            <li>Ebook #1</li>
+          </ul>
         </ul>
       </PageNavigation>
       <PageContent>
