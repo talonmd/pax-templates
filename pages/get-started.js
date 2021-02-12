@@ -4,9 +4,13 @@ import Layout from "../layout/Layout"
 import PageNavigation from "../components/PageNavigation"
 import PageContent from "../components/PageContent"
 
-export default function Home() {
+export default () => {
   return (
-    <Layout headline="Get Started" cookieTrail="" imagePath="" pageNav="home">
+    <Layout
+      headline="Get Started"
+      cookieTrail={[{ name: "Get Started", path: "/get-started" }]}
+      imagePath=""
+    >
       <PageNavigation>
         <ul>
           <li>Quickstart Rules</li>

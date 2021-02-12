@@ -4,7 +4,7 @@ import PageContent from "../components/PageContent"
 
 export default () => {
   return (
-    <Layout headline="Rules" cookieTrail="" imagePath="">
+    <Layout headline="Rules" cookieTrail={[{ name: "Rules", path: "/rules" }]} imagePath="">
       <PageNavigation>
         <ul>
           <li>Player Rules</li>

@@ -4,7 +4,11 @@ import PageContent from "../components/PageContent"
 
 export default () => {
   return (
-    <Layout headline="Digital Tools" cookieTrail="" imagePath="">
+    <Layout
+      headline="Digital Tools"
+      cookieTrail={[{ name: "Digital Tools", path: "/digital-tools" }]}
+      imagePath=""
+    >
       <PageNavigation>
         <ul>
           <li>Avarice Sheets</li>

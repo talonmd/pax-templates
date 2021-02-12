@@ -4,7 +4,11 @@ import PageContent from "../components/PageContent"
 
 export default () => {
   return (
-    <Layout headline="Explore Avarice" cookieTrail="" imagePath="">
+    <Layout
+      headline="Explore Avarice"
+      cookieTrail={[{ name: "Explore Avarice", path: "/explore" }]}
+      imagePath=""
+    >
       <PageNavigation>
         <ul>
           <li>Races</li>

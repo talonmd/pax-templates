@@ -6,7 +6,7 @@ import PageContent from "../components/PageContent"
 
 export default function Home() {
   return (
-    <Layout headline="Index" cookieTrail="" imagePath="" pageNav="home">
+    <Layout headline="Enter the world of Avarice" cookieTrail={[]} imagePath="">
       <PageNavigation>
         <ul>
           <li>Get Started</li>

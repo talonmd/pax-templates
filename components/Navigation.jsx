@@ -35,12 +35,12 @@ const Navigation = () => {
         </li>
         <ul className="navigation__list--nested">
           <li className="navigation__item--nested">
-            <Link href="/rules/player">
+            <Link href="/rules/player-rules">
               <a className="navigation__link--nested">Player Rules</a>
             </Link>
           </li>
           <li className="navigation__item--nested">
-            <Link href="/rules/cc">
+            <Link href="/rules/cc-rules">
               <a className="navigation__link--nested">CC Rules</a>
             </Link>
           </li>
