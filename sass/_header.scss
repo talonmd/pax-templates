@@ -28,7 +28,10 @@
     height: 2.5rem;
     border: $border;
     padding: 0 1.5rem;
-    min-width: 30rem;
+    width: 30rem;
+    @media only screen and (max-width: 800px) {
+      width: 3rem;
+    }
     &:focus {
       outline: none;
       border: $border-dark;
