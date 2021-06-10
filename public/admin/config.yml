@@ -21,6 +21,41 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+      - label: "World History"
+        name: "world-history"
+        file: "content/world-history.md"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "races"
+    label: "Races"
+    folder: "content/races"
+    create: true
+    fields:
+      - { label: "name", name: "name", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "race history"
+    label: "Race History"
+    folder: "content/playable-races"
+    create: true
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "corponations"
+    label: "CorpoNations"
+    folder: "content/corponations"
+    create: true
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "corponations history"
+    label: "CorpoNations History"
+    folder: "content/playable-races"
+    create: true
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "content/posts" # The path to the folder where the documents are stored
@@ -93,6 +128,15 @@ collections:
     editor:
       preview: false
     files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "navigation-config.json"
+        fields:
+          - label: "Main Navigation"
+            name: "navigation"
+            widget: "list"
+            hint: "hello there"
+
       - name: "general"
         label: "Site Config"
         file: "config.json"
