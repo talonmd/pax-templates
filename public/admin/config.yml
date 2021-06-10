@@ -12,6 +12,7 @@ collections:
         name: "home"
         file: "content/home.md"
         fields:
+          - { label: "Name", name: "name", widget: "string", default: "Home" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -25,6 +26,7 @@ collections:
         name: "world-history"
         file: "content/world-history.md"
         fields:
+          - { label: "Name", name: "name", widget: "string", default: "World History" }
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "races"
@@ -136,6 +138,37 @@ collections:
             name: "navigation"
             widget: "list"
             hint: "hello there"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "races"
+                #file: "authors"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+
+      - name: "sec-navigation"
+        label: "Secondary Navigation"
+        file: "sec-navigation-config.json"
+        fields:
+          - label: "Main Navigation"
+            name: "navigation"
+            widget: "list"
+            hint: "hello there"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "pages"
+                #file: "authors"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
 
       - name: "general"
         label: "Site Config"
