@@ -1,0 +1,7 @@
+authors:
+  - slug: author1
+    name: Author 1
+    introduction: Hello there
+  - slug: author2
+    name: Author 2
+    introduction: HEllo there again
