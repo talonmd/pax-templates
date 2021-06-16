@@ -1,5 +1,5 @@
 import React from "react"
-//import Head from "next/head"
+import Head from "next/head"
 
 import Header from "../components/Header"
 import Navigation from "../components/Navigation"
@@ -9,14 +9,30 @@ import Footer from "../components/Footer"
 
 const Layout = ({ children, imagePath, headline, cookieTrail, pageNav }) => {
   return (
-    <div className="layout">
-      <Header />
-      <Navigation />
-      <PageHero imagePath={imagePath} />
-      <PageHeader headline={headline} cookieTrail={cookieTrail} />
-      {children}
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+      </Head>
+      <div className="layout">
+        <Header />
+        <Navigation />
+        <PageHero imagePath={imagePath} />
+        <PageHeader headline={headline} cookieTrail={cookieTrail} />
+        {children}
+        <Footer />
+      </div>
+    </>
   )
 }
 

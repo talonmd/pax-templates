@@ -25,6 +25,8 @@ const Header = () => {
             </div>
           </a>
         </Link>
+        <button>Login</button>
+        <button>Logout</button>
         <Link href="/profile/123">
           <a>
             <div className="header__profile">
