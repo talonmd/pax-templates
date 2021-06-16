@@ -1,13 +1,22 @@
 .navigation {
   padding-bottom: 4rem;
   overflow: hidden;
-  width: 19rem;
+  width: 27rem;
   transition: width 1s;
+  border-right: 6px solid $color-light-blue;
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+    overflow: visible;
+  }
   &.closed {
-    width: 0;
+    width: 6rem;
+    @media only screen and (max-width: 800px) {
+      width: 100vw;
+    }
   }
   &.closed &__list {
     opacity: 0;
+    display: none;
   }
   &__hamburger-icon {
     color: $color-white;
@@ -16,16 +25,21 @@
     padding: 0.7rem 1rem;
     text-align: right;
     cursor: pointer;
-    &--open {
-      transform: rotateY(90deg);
-    }
+    transition: all 1s;
   }
   &__list {
-    width: 19rem;
-    margin-top: 7rem;
+    position: relative;
+    width: 27rem;
     opacity: 1;
     transition: opacity 0.5s;
     list-style-type: none;
+    @media only screen and (max-width: 800px) {
+      background-color: $color-black;
+      width: 100vw;
+      z-index: 999;
+      margin-top: -2rem;
+      padding-bottom: 5rem;
+    }
     &--nested {
       list-style-type: none;
     }

@@ -1,16 +1,17 @@
 .layout {
-  //max-width: 95vw;
-  //margin: 2rem auto;
+  max-width: 95vw;
+  min-height: 100vh;
+  margin: 2rem auto;
   box-shadow: $box-shadow;
   display: grid;
-  grid-template-columns: auto 7rem 1fr max-content;
-  grid-template-rows: 7rem 16rem $pageheader-height auto auto;
+  grid-template-columns: minmax(auto, max-content) 1fr max-content;
+  grid-template-rows: 7rem 16rem minmax($pageheader-height, max-content) auto auto;
   grid-template-areas:
-    "navigation closedbar header header"
-    "navigation closedbar pagehero pagehero"
-    "navigation closedbar pageheader pageheader"
-    "navigation closedbar pagecontent pagenavigation"
-    "navigationfooter navigationfooter footer footer";
+    "navigation header header"
+    "navigation pagehero pagehero"
+    "navigation pageheader pageheader"
+    "navigation pagecontent pagenavigation"
+    "navigation footer footer";
 }
 
 .header {
@@ -21,20 +22,6 @@
 .navigation {
   grid-area: navigation;
   background-color: $color-black;
-}
-
-.navigation-footer {
-  grid-area: navigationfooter;
-  background-color: $color-black;
-  border-right: 0.6rem solid $color-light-blue;
-}
-
-.closed-bar {
-  grid-area: closedbar;
-  background-color: $color-black;
-  border-right: 0.6rem solid $color-light-blue;
-  display: flex;
-  justify-content: center;
 }
 
 .page-hero {
@@ -72,9 +59,9 @@
     max-width: 100vw;
     margin: 0;
     grid-template-columns: 1fr max-content;
-    grid-template-rows: 7rem 16rem $pageheader-height auto auto;
+    grid-template-rows: 7rem max-content $pageheader-height auto auto;
     grid-template-areas:
-      "navigation closedbar"
+      "navigation navigation"
       "header header"
       "pagehero pagehero"
       "pageheader pageheader"
@@ -83,15 +70,9 @@
   }
 
   .header {
-    flex-direction: column;
-
     &__search-bar-input {
       min-width: 3rem;
       width: 3rem;
     }
-  }
-
-  .page-navigation {
-    display: none;
   }
 }
