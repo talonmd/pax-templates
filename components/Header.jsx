@@ -13,30 +13,13 @@ const Header = () => {
         </div>
       </Link>
       <div className="header__right-side">
-        <div className="header__search-bar">
-          <input type="text" className="header__search-bar-input" placeholder="search..." />
-          {/* TO DO - add a search icon here */}
-        </div>
+        <input type="text" className="header__search-bar-input" placeholder="search..." />
+        {/* TO DO - add a search icon here */}
         <Link href="/profile/123">
-          <a>
-            <div className="header__notifications">
-              <img className="header__notifications-icon" src="/assets/svg/chat.svg" />
-              <span className="header__notifications-alert">4</span>
-            </div>
-          </a>
-        </Link>
-        <button>Login</button>
-        <button>Logout</button>
-        <Link href="/profile/123">
-          <a>
-            <div className="header__profile">
-              <img
-                src="/img/temp-user.jpg"
-                alt="user profile photo"
-                className="header__profile-icon"
-              />
-            </div>
-          </a>
+          <button className="button button-black">
+            My Dashboard
+            <span className="header__notifications-alert">4</span>
+          </button>
         </Link>
       </div>
     </header>
