@@ -5,7 +5,7 @@ import Layout from "../layout/Layout"
 import PageNavigation from "../components/PageNavigation"
 import PageContent from "../components/PageContent"
 
-import { attributes, react as HomeContent } from "../content/home.md"
+import { attributes, react as HomeContent } from "../content/pages/home.md"
 
 export default function Home({ isLoggedIn }) {
   let { title, cats } = attributes
