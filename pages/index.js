@@ -7,14 +7,19 @@ import PageContent from "../components/PageContent"
 
 import { attributes, react as HomeContent } from "../content/home.md"
 
-export default function Home() {
+export default function Home({ isLoggedIn }) {
   let { title, cats } = attributes
   return (
     <>
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-      <Layout headline="Enter the world of Avarice" cookieTrail={[]} imagePath="">
+      <Layout
+        headline="Enter the world of Avarice"
+        cookieTrail={[]}
+        imagePath=""
+        isLoggedIn={isLoggedIn}
+      >
         <PageNavigation>
           <ul>
             <li>Get Started</li>

@@ -2,6 +2,10 @@
   button {
     margin: 0;
     position: relative;
+    border-radius: 0;
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
   }
   display: flex;
   justify-content: space-between;
@@ -42,13 +46,13 @@
     margin-left: 1.5rem;
   }
   &__search-bar-input {
-    //border-radius: 2.5rem;
     height: 2.5rem;
     border: $border;
+    border-radius: 0;
     padding: 0 1.5rem;
     max-width: 10rem;
     margin: 0;
-    margin-right: 2rem;
+    margin-right: 3rem;
     @media only screen and (max-width: 800px) {
       width: 3rem;
     }
@@ -70,18 +74,5 @@
     color: $color-white-dark;
     border-radius: 30%;
     padding: 1rem;
-  }
-  &__profile {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    &:hover {
-      background-color: darken($color-white, 3%);
-    }
-  }
-  &__profile-icon {
-    padding: 1rem 1.5rem;
-    height: 4.5rem;
-    border-radius: 100%;
   }
 }

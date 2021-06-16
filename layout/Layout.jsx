@@ -7,7 +7,7 @@ import PageHero from "../components/PageHero"
 import PageHeader from "../components/PageHeader"
 import Footer from "../components/Footer"
 
-const Layout = ({ children, imagePath, headline, cookieTrail, pageNav }) => {
+const Layout = ({ children, imagePath, headline, cookieTrail, pageNav, isLoggedIn }) => {
   return (
     <>
       <Head>
@@ -25,7 +25,7 @@ const Layout = ({ children, imagePath, headline, cookieTrail, pageNav }) => {
         />
       </Head>
       <div className="layout">
-        <Header />
+        <Header isLoggedIn={isLoggedIn} />
         <Navigation />
         <PageHero imagePath={imagePath} />
         <PageHeader headline={headline} cookieTrail={cookieTrail} />
