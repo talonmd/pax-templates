@@ -8,9 +8,15 @@
     border-left: $border;
     color: darken(gray, 20%);
 
+    .sec-active {
+      border-bottom: 2px solid black;
+      color: darken(gray, 80%);
+    }
+
     li {
       cursor: pointer;
       padding: 0.5rem 0;
+      padding-bottom: 0;
       text-transform: uppercase;
       font-weight: 600;
       font-family: "Carrois Gothic SC", sans-serif;
