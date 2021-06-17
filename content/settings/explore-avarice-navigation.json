@@ -1,46 +1,46 @@
 {
   "races": [
     {
-      "page": "Playable Races"
+      "page": "Playable Races | playable-races"
     },
     {
-      "page": "Unplayable Races"
+      "page": "Unplayable Races | unplayable-races"
     },
     {
-      "page": "Beasts"
+      "page": "Beasts | beasts"
     }
   ],
   "suronis": [
     {
-      "page": "Weapons"
+      "page": "Weapons | weapons"
     },
     {
-      "page": "Wearables"
+      "page": "Wearables | wearables"
     },
     {
-      "page": "Items"
+      "page": "Items | items"
     }
   ],
   "world_history": [
     {
-      "page": "World History Timeline"
+      "page": "World History Timeline | world-history-timeline"
     },
     {
-      "page": "History of Organizations"
+      "page": "Other Organizations | other-organizations"
     },
     {
-      "page": "History of Races"
+      "page": "History of Races | history-of-races"
     }
   ],
   "organizations": [
     {
-      "page": "CorpoNations"
+      "page": "CorpoNations | major-corponations"
     },
     {
-      "page": "Religions"
+      "page": "Religions | religions"
     },
     {
-      "page": "Other Organizations"
+      "page": "Other Organizations | other-organizations"
     }
   ]
 }
