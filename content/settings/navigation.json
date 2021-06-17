@@ -54,5 +54,13 @@
     {
       "page": "Help & Support"
     }
+  ],
+  "explore": [
+    {
+      "page": "Races"
+    },
+    {
+      "page": "Organizations"
+    }
   ]
 }
