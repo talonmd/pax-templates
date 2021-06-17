@@ -23,10 +23,24 @@
   ],
   "world_history": [
     {
+      "page": "World History Timeline"
+    },
+    {
       "page": "History of Organizations"
     },
     {
       "page": "History of Races"
+    }
+  ],
+  "organizations": [
+    {
+      "page": "CorpoNations"
+    },
+    {
+      "page": "Religions"
+    },
+    {
+      "page": "Other Organizations"
     }
   ]
 }
