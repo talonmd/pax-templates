@@ -2,7 +2,7 @@
   padding-bottom: 4rem;
   overflow: hidden;
   width: 27rem;
-  transition: width 1s;
+  transition: width 0.3s;
   border-right: 6px solid $color-light-blue;
   @media only screen and (max-width: 800px) {
     width: 100vw;
