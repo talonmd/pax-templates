@@ -1,0 +1,25 @@
+{
+  "races": [
+    {
+      "page": "Playable Races"
+    },
+    {
+      "page": "Unplayable Races"
+    },
+    {
+      "page": "Beasts"
+    }
+  ],
+  "suronis": [
+    {
+      "page": "Weapons"
+    },
+    {
+      "page": "Wearables"
+    },
+    {
+      "page": "Items"
+    }
+  ],
+  "world_history": []
+}
