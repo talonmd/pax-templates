@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Link from "next/link"
 
+import NestedNavigationList from "./navigation/nested-navigation-list"
+
 import navigationConfig from "../content/settings/navigation.json"
 
 const Navigation = () => {
@@ -24,17 +26,8 @@ const Navigation = () => {
             <a className="navigation__link">Get Started</a>
           </li>
         </Link>
-        <ul className="navigation__list--nested">
-          {get_started.map((listItem, index) => {
-            return (
-              <Link key={index} href={`/get-started/${listItem.slug}`}>
-                <li className="navigation__item--nested">
-                  <a className="navigation__link--nested">{listItem.page}</a>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+
+        <NestedNavigationList filePath="get-started" listItems={get_started} />
 
         <Link href="/rules">
           <li className="navigation__item">
@@ -42,17 +35,7 @@ const Navigation = () => {
           </li>
         </Link>
 
-        <ul className="navigation__list--nested">
-          {rules.map((listItem, index) => {
-            return (
-              <Link key={index} href={`/rules/${listItem.slug}`}>
-                <li className="navigation__item--nested">
-                  <a className="navigation__link--nested">{listItem.page}</a>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+        <NestedNavigationList filePath="rules" listItems={rules} />
 
         <Link href="/explore">
           <li className="navigation__item">
@@ -60,17 +43,7 @@ const Navigation = () => {
           </li>
         </Link>
 
-        <ul className="navigation__list--nested">
-          {explore_avarice.map((listItem, index) => {
-            return (
-              <Link key={index} href={`/explore/${listItem.slug}`}>
-                <li className="navigation__item--nested">
-                  <a className="navigation__link--nested">{listItem.page}</a>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+        <NestedNavigationList filePath="explore" listItems={explore_avarice} />
 
         <Link href="/digital-tools">
           <li className="navigation__item">
@@ -78,17 +51,7 @@ const Navigation = () => {
           </li>
         </Link>
 
-        <ul className="navigation__list--nested">
-          {digital_tools.map((listItem, index) => {
-            return (
-              <Link key={index} href={`/digital-tools/${listItem.slug}`}>
-                <li className="navigation__item--nested">
-                  <a className="navigation__link--nested">{listItem.page}</a>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+        <NestedNavigationList filePath="digital-tools" listItems={digital_tools} />
 
         <Link href="/community">
           <li className="navigation__item">
@@ -96,17 +59,7 @@ const Navigation = () => {
           </li>
         </Link>
 
-        <ul className="navigation__list--nested">
-          {community.map((listItem, index) => {
-            return (
-              <Link key={index} href={`/community/${listItem.slug}`}>
-                <li className="navigation__item--nested">
-                  <a className="navigation__link--nested">{listItem.page}</a>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+        <NestedNavigationList filePath="community" listItems={community} />
       </ul>
     </nav>
   )
