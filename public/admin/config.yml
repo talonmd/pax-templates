@@ -54,7 +54,6 @@ collections:
                   - "name"
                 display_fields:
                   - "name"
-                  - "slug"
                 value_field: "name"
           - label: "Explore Avarice"
             label_singular: "Page"
@@ -97,6 +96,86 @@ collections:
                 widget: "relation"
                 collapsed: true
                 collection: "pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+
+      - name: "explore_avarice_navigation"
+        label: "Explore Avarice Navigation"
+        file: "/content/settings/explore-avarice-navigation.json"
+        fields:
+          - label: "World Overview"
+            label_singular: "Page"
+            name: "world_overview"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collapsed: true
+                collection: "explore_avarice"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Races"
+            label_singular: "Page"
+            name: "races"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collapsed: true
+                collection: "explore_avarice"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Organizations"
+            label_singular: "Page"
+            name: "organizations"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collapsed: true
+                collection: "explore_avarice"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "SURONIS"
+            label_singular: "Page"
+            name: "suronis"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collapsed: true
+                collection: "explore_avarice"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "World History"
+            label_singular: "Page"
+            name: "world_history"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collapsed: true
+                collection: "explore_avarice"
                 search_fields:
                   - "name"
                 display_fields:
