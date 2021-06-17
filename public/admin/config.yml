@@ -27,7 +27,7 @@ collections:
         fields:
           - label: "Get Started"
             label_singular: "Page"
-            name: "get-started"
+            name: "get_started"
             widget: "list"
             fields:
               - label: "Page"
@@ -54,10 +54,11 @@ collections:
                   - "name"
                 display_fields:
                   - "name"
+                  - "slug"
                 value_field: "name"
           - label: "Explore Avarice"
             label_singular: "Page"
-            name: "explore"
+            name: "explore_avarice"
             widget: "list"
             fields:
               - label: "Page"
@@ -72,7 +73,7 @@ collections:
                 value_field: "name"
           - label: "Digital Tools"
             label_singular: "Page"
-            name: "digital-tools"
+            name: "digital_tools"
             widget: "list"
             fields:
               - label: "Page"
@@ -109,6 +110,7 @@ collections:
     create: true
     fields:
       - { label: "Name", name: "name", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - label: "SEO Data"
         name: "seo"
@@ -176,6 +178,33 @@ collections:
           valueField: "tags.*.slug"
 
       - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "explore_avarice"
+    label: "Explore Avarice"
+    label_singular: "Page"
+    folder: "content/pages/explore"
+    identifier_field: name
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "SEO Data"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Page Headline", name: "page-headline", widget: "string" }
+      # - label: "Cats"
+      #   name: "cats"
+      #   widget: list
+      #   fields:
+      #     - { label: "Name", name: "name", widget: "string" }
+      #     - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "races"
