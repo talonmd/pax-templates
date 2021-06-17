@@ -13,3 +13,42 @@ $border-dark: 1px solid $color-black;
 $box-shadow: 0 0 1.5rem $color-grey-light-1;
 
 $pageheader-height: 7rem;
+
+// VARIABLES FILE FROM AVARICE SHEETS
+// standard colors
+$color-white: whitesmoke;
+$color-black: black;
+$color-black-op: rgba(0, 0, 0, 0.8);
+$color-grey: gray;
+$color-gray: gray;
+
+// accent colors
+$color-blue: #bbeeee;
+$color-purple: rgb(224, 188, 224);
+$color-yellow: #f1dbb3;
+$color-red: rgb(216, 145, 145);
+$color-green: rgb(170, 221, 170);
+
+// app variables
+$app-background-color: #f8f8f8;
+$app-text-color: #060606;
+
+// for all horizontal rules and borders used like one
+$hr-color: rgb(209, 209, 209);
+
+// main variables
+$main-background-color-light: white;
+$main-text-color-dark: #060606;
+$main-background-color-dark: #060606;
+$main-text-color-light: white;
+$link-color: #be8f3e;
+
+// app wide box shadow
+$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+// component specific variables
+$footer-text-color: rgb(134, 134, 134);
+
+// custom button variables
+$custom-button-background-color: $main-background-color-light;
+$custom-button-border: 1px solid lighten($color-gray, 40%);

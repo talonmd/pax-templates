@@ -1,0 +1,189 @@
+// SIGN IN AND SIGN UP PAGE
+.sign-in-and-sign-up {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $main-background-color-light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 2rem 2rem 2rem;
+  }
+
+  &__header-logo {
+    height: 7rem;
+  }
+
+  &__form {
+    min-width: 30vw;
+    background-color: $main-background-color-light;
+    //border: 1px solid rgb(197, 197, 197);
+    box-shadow: $box-shadow;
+    padding: 4rem 5rem;
+  }
+
+  &__form-footer-text {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  &__form-footer-link {
+    cursor: pointer;
+    color: $link-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__footer {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__footer-text {
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(100, 100, 100);
+  }
+}
+
+// SIGN IN FORM
+.sign-in {
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+}
+
+// SIGN UP FORM
+.sign-up {
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+}
+
+// CUSTOM BUTTON COMPONENT
+.custom-button {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  font-family: "Carrois Gothic SC", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  border: $custom-button-border;
+  padding: 5px;
+  min-height: 40px;
+  margin: 1rem 1rem 1rem 0;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+
+  background-color: $custom-button-background-color;
+  color: $main-text-color-dark;
+
+  &:hover {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.28), 0 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.14);
+    transform: scale(0.99);
+  }
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &--form-button {
+    background-color: $main-background-color-dark;
+    color: $main-text-color-light;
+  }
+
+  &--sign-out-button {
+    background-color: $main-background-color-dark;
+    color: $main-text-color-light;
+  }
+}
+
+// FORM INPUT COMPONENT
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -5px;
+  font-size: 12px;
+  color: $main-color;
+  background-color: white;
+}
+
+.form-input-group {
+  position: relative;
+  margin: 15px 0;
+
+  .form-input {
+    background: none;
+    background-color: white;
+    color: $main-color;
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border: 1px solid lighten($sub-color, 30%);
+    margin: 25px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-label {
+    color: $sub-color;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 13px;
+    top: 12px;
+    transition: 300ms ease all;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+}

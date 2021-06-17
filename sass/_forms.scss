@@ -1,0 +1,133 @@
+form input,
+form select,
+form option,
+form textarea {
+  font-family: "Carrois Gothic", sans-serif;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  background-color: $main-background-color-light;
+
+  &.purple-top-border {
+    border-top: 0.5rem solid $color-purple;
+  }
+  &.blue-top-border {
+    border-top: 0.5rem solid $color-blue;
+  }
+}
+
+fieldset {
+  border: none;
+  margin: 0.5rem;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: block;
+  padding: 1.5rem 0.5rem 0 1rem;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+  border: none;
+  border: 1px solid lighten($color-gray, 30%);
+  min-height: 30px;
+  width: 96%;
+  margin: 0.5rem 2.5%;
+  font-size: 1.4rem;
+}
+
+form input[type="submit"] {
+  margin: 0;
+}
+
+.radio-list-container {
+  display: flex;
+}
+
+.radio-input-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.radio-input-container--extra-margin {
+  margin-left: 1.2rem;
+}
+
+form input[type="radio"] {
+  width: 2rem;
+  margin-right: 0.5rem;
+  box-shadow: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+form textarea {
+  max-width: 96%;
+  padding: 1rem;
+  line-height: 1.5;
+  min-height: 80px;
+  resize: none;
+}
+
+form select {
+  padding: 1rem;
+  border: none;
+  border: 1px solid lighten($color-gray, 30%);
+  min-height: 30px;
+  width: 96%;
+  margin: 0.5rem 2.5%;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.take-a-rest-form {
+  &__abilities-overview {
+    margin: 1rem 1rem 5rem 1rem;
+  }
+
+  &__abilities {
+    margin-top: 1rem;
+    cursor: pointer;
+    &--equipped {
+      border: 0.4rem solid $color-purple;
+    }
+    &--locked {
+      background-color: lighten($color-gray, 40%);
+    }
+  }
+}
+
+.level-up-form {
+  &__abilities-overview {
+    margin: 1rem 1rem 5rem 1rem;
+  }
+
+  &__abilities {
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    &--selected {
+      border: 0.4rem solid $color-purple;
+    }
+    &--locked {
+      background-color: lighten($color-gray, 45%);
+      &::after {
+        content: "LOCKED";
+        color: lighten($color-gray, 30%);
+        font-size: 2rem;
+        z-index: 0;
+        position: absolute;
+        top: 50px;
+        right: 10%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

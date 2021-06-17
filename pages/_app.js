@@ -1,7 +1,7 @@
 import "../sass/main.scss"
 
 function MyApp({ Component, pageProps }) {
-  const isLoggedIn = false
+  const isLoggedIn = true
   return <Component {...pageProps} isLoggedIn={isLoggedIn} />
 }
 
