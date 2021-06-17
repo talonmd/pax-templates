@@ -59,13 +59,14 @@ collections:
           - label: "Explore Avarice"
             label_singular: "Page"
             name: "explore_avarice"
+            hint: "You will only be able to select pages created under 'Explore Avarice'"
             widget: "list"
             fields:
               - label: "Page"
                 name: "page"
                 widget: "relation"
                 collapsed: true
-                collection: "pages"
+                collection: "explore_avarice"
                 search_fields:
                   - "name"
                 display_fields:
@@ -121,12 +122,6 @@ collections:
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Page Headline", name: "page-headline", widget: "string" }
-      # - label: "Cats"
-      #   name: "cats"
-      #   widget: list
-      #   fields:
-      #     - { label: "Name", name: "name", widget: "string" }
-      #     - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "posts"
@@ -199,12 +194,6 @@ collections:
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Page Headline", name: "page-headline", widget: "string" }
-      # - label: "Cats"
-      #   name: "cats"
-      #   widget: list
-      #   fields:
-      #     - { label: "Name", name: "name", widget: "string" }
-      #     - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "races"
