@@ -37,9 +37,10 @@ collections:
                 collection: "pages"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
           - label: "Rules"
             label_singular: "Page"
             name: "rules"
@@ -52,9 +53,10 @@ collections:
                 collection: "pages"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
           - label: "Explore Avarice"
             label_singular: "Page"
             name: "explore_avarice"
@@ -68,9 +70,10 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
           - label: "Digital Tools"
             label_singular: "Page"
             name: "digital_tools"
@@ -83,9 +86,10 @@ collections:
                 collection: "pages"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
           - label: "Community"
             label_singular: "Page"
             name: "community"
@@ -98,9 +102,10 @@ collections:
                 collection: "pages"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
 
       - name: "explore_avarice_navigation"
         label: "Explore Avarice Navigation"
@@ -118,9 +123,11 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
+
           - label: "Races"
             label_singular: "Page"
             name: "races"
@@ -133,9 +140,11 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
+
           - label: "Organizations"
             label_singular: "Page"
             name: "organizations"
@@ -148,9 +157,11 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
+
           - label: "SURONIS"
             label_singular: "Page"
             name: "suronis"
@@ -163,9 +174,11 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
+
           - label: "World History"
             label_singular: "Page"
             name: "world_history"
@@ -178,9 +191,10 @@ collections:
                 collection: "explore_avarice"
                 search_fields:
                   - "name"
+                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "name"
+                value_field: "{{name}} | {{slug}}"
 
   - name: "pages"
     label: "Pages"

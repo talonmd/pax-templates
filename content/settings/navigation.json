@@ -1,16 +1,16 @@
 {
   "get_started": [
     {
-      "page": "About Avarice"
+      "page": "About Avarice | about-avarice"
     },
     {
-      "page": "Quickstart Rules"
+      "page": "Quickstart Rules | quickstart-rules"
     },
     {
-      "page": "Resources"
+      "page": "Resources | resources"
     },
     {
-      "page": "Pricing"
+      "page": "Pricing | pricing"
     }
   ],
   "rules": [
@@ -23,53 +23,53 @@
   ],
   "digital_tools": [
     {
-      "page": "Avarice Sheets"
+      "page": "Avarice Sheets | avarice-sheets"
     },
     {
-      "page": "Avarice TableTop"
+      "page": "Avarice TableTop | avarice-tabletop"
     },
     {
-      "page": "Ebooks"
+      "page": "Ebooks | ebooks"
     },
     {
-      "page": "PDFS"
+      "page": "PDFS | pdfs"
     }
   ],
   "community": [
     {
-      "page": "Blog"
+      "page": "Blog | blog"
     },
     {
-      "page": "Forum"
+      "page": "Forum | forum"
     },
     {
-      "page": "Newsletter"
+      "page": "Newsletter | newsletter"
     },
     {
-      "page": "Discord"
+      "page": "Discord | discord"
     },
     {
-      "page": "Social Media"
+      "page": "Social Media | social-media"
     },
     {
-      "page": "Help & Support"
+      "page": "Help & Support | help-support"
     }
   ],
   "explore_avarice": [
     {
-      "page": "World Overview"
+      "page": "World Overview | world-overview"
     },
     {
-      "page": "Races"
+      "page": "Races | races"
     },
     {
-      "page": "Organizations"
+      "page": "Organizations | organizations"
     },
     {
-      "page": "SURONIS"
+      "page": "SURONIS | suronis"
     },
     {
-      "page": "World History"
+      "page": "World History | world-history"
     }
   ]
 }
