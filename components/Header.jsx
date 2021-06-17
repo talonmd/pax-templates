@@ -15,8 +15,8 @@ const Header = ({ isLoggedIn }) => {
       <div className="header__right-side">
         <input type="text" className="header__search-bar-input" placeholder="search..." />
         {/* TO DO - add a search icon here */}
-        {isLoggedIn ? (
-          <Link href="/profile/">
+        {true ? (
+          <Link href="/dashboard">
             <button className="button button-black">
               My Dashboard
               <span className="header__notifications-alert">4</span>
@@ -24,10 +24,10 @@ const Header = ({ isLoggedIn }) => {
           </Link>
         ) : (
           <>
-            <Link href="/profile/">
+            <Link href="/dasboard/register">
               <button className="button button-black">Join Avarice</button>
             </Link>
-            <Link href="/profile/">
+            <Link href="/dasboard/login">
               <button className="button button-outline button-black">Sign In</button>
             </Link>
           </>
