@@ -1,5 +1,5 @@
 {
-  "get-started": [
+  "get_started": [
     {
       "page": "About Avarice"
     },
@@ -21,7 +21,7 @@
       "page": "CC Rules"
     }
   ],
-  "digital-tools": [
+  "digital_tools": [
     {
       "page": "Avarice Sheets"
     },
@@ -55,7 +55,7 @@
       "page": "Help & Support"
     }
   ],
-  "explore": [
+  "explore_avarice": [
     {
       "page": "World Overview"
     },
