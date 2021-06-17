@@ -1,24 +1,175 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
 # publish_mode: editorial_workflow
+
 media_folder: public/images
 public_folder: /images/uploads
+
 collections:
+  # site config and blog post meta info
+  - name: "site-settings"
+    label: "Site Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "/content/settings/navigation.json"
+        fields:
+          - label: "Get Started"
+            label_singular: "Page"
+            name: "get-started"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "Pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Rules"
+            label_singular: "Page"
+            name: "rules"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "Pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Explore Avarice"
+            label_singular: "Page"
+            name: "explore"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "Pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Digital Tools"
+            label_singular: "Page"
+            name: "digital-tools"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "Pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+          - label: "Community"
+            label_singular: "Page"
+            name: "community"
+            widget: "list"
+            fields:
+              - label: "Page"
+                name: "page"
+                widget: "relation"
+                collection: "Pages"
+                search_fields:
+                  - "name"
+                display_fields:
+                  - "name"
+                value_field: "name"
+
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
     folder: "content/pages"
     create: true
     fields:
-      - { label: "Name", name: "name", widget: "string", default: "Home" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - label: "Cats"
-        name: "cats"
-        widget: list
+      - label: "SEO Data"
+        name: "seo"
+        widget: "object"
+        collapsed: true
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Page Headline", name: "page-headline", widget: "string" }
+      # - label: "Cats"
+      #   name: "cats"
+      #   widget: list
+      #   fields:
+      #     - { label: "Name", name: "name", widget: "string" }
+      #     - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+
+      - label: Author
+        name: "author"
+        widget: relation
+        collection: "meta"
+        file: "authors"
+        searchFields:
+          - "authors.*.name"
+        displayFields:
+          - "authors.*.name"
+        valueField: "authors.*.slug"
+
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        summary: "{{fields.tag}}"
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
+
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "races"
@@ -49,71 +200,6 @@ collections:
     create: true
     fields:
       - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts/"
-    extension: "mdx"
-    format: "frontmatter"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
-    fields:
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
-      - label: Author
-        name: "author"
-        widget: relation
-        collection: "meta"
-        file: "authors"
-        searchFields:
-          - "authors.*.name"
-        displayFields:
-          - "authors.*.name"
-        valueField: "authors.*.slug"
-      - label: Tags
-        label_singular: "Tag"
-        name: "tags"
-        widget: list
-        summary: "{{fields.tag}}"
-        field:
-          label: Tag
-          name: tag
-          widget: relation
-          collection: "meta"
-          file: "tags"
-          searchFields:
-            - "tags.*.name"
-          displayFields:
-            - "tags.*.name"
-          valueField: "tags.*.slug"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
 
   # site config and blog post meta info
   - name: "config"
