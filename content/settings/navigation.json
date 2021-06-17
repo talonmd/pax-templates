@@ -15,10 +15,10 @@
   ],
   "rules": [
     {
-      "page": "Player Rules"
+      "page": "player-rules_Player Rules"
     },
     {
-      "page": "CC Rules"
+      "page": "cc-rules_CC Rules"
     }
   ],
   "digital_tools": [
