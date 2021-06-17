@@ -1,0 +1,58 @@
+{
+  "get-started": [
+    {
+      "page": "About Avarice"
+    },
+    {
+      "page": "Quickstart Rules"
+    },
+    {
+      "page": "Resources"
+    },
+    {
+      "page": "Pricing"
+    }
+  ],
+  "rules": [
+    {
+      "page": "Player Rules"
+    },
+    {
+      "page": "CC Rules"
+    }
+  ],
+  "digital-tools": [
+    {
+      "page": "Avarice Sheets"
+    },
+    {
+      "page": "Avarice TableTop"
+    },
+    {
+      "page": "Ebooks"
+    },
+    {
+      "page": "PDFS"
+    }
+  ],
+  "community": [
+    {
+      "page": "Blog"
+    },
+    {
+      "page": "Forum"
+    },
+    {
+      "page": "Newsletter"
+    },
+    {
+      "page": "Discord"
+    },
+    {
+      "page": "Social Media"
+    },
+    {
+      "page": "Help & Support"
+    }
+  ]
+}
