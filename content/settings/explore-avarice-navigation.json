@@ -21,5 +21,12 @@
       "page": "Items"
     }
   ],
-  "world_history": []
+  "world_history": [
+    {
+      "page": "History of Organizations"
+    },
+    {
+      "page": "History of Races"
+    }
+  ]
 }
