@@ -21,6 +21,7 @@ const Layout = ({
 }) => {
   if (!attributes) return <>broken</>
   const { date, name, page_headline, seo, slug, hero_banner } = attributes
+  if (!navigationConfig) navigationConfig = []
   return (
     <>
       <Head>

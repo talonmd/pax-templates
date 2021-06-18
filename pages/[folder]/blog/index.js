@@ -2,12 +2,18 @@ import matter from "gray-matter"
 
 import ReactMarkdown from "react-markdown"
 
-import Layout from "../../layout/Layout"
-import PostList from "../../components/blog/PostList"
+import Layout from "../../../layout/Layout"
+import PostList from "../../../components/blog/PostList"
 
-export default function Blog({ posts, frontmatter, content }) {
+import {
+  importNavigationOrder,
+  string_to_slug,
+  generateNavigationConfig,
+} from "../../../util/util.js"
+
+export default function Blog({ navigationConfig, posts, frontmatter, content }) {
   return (
-    <Layout attributes={frontmatter}>
+    <Layout attributes={frontmatter} navigationConfig={navigationConfig}>
       <ReactMarkdown children={content} />
       <PostList posts={posts} />
     </Layout>
@@ -34,19 +40,39 @@ export async function getStaticProps() {
     })
     // return the array of every files data
     return data
-  })(require.context("../../content/posts", true, /\.md$/))
+  })(require.context("../../../content/posts", true, /\.md$/))
 
   // import the content and data of the blog page
-  const fileData = await import(`../../content/pages/blog.md`)
-
+  const fileData = await import(`../../../content/pages/blog.md`)
   const { data, content } = matter(fileData.default)
+
+  const navigationConfig = await generateNavigationConfig()
 
   // return the posts array and page content as props
   return {
     props: {
+      navigationConfig,
       posts,
       frontmatter: data,
       content,
     },
+  }
+}
+
+export async function getStaticPaths() {
+  // import navigation order json config
+  const navOrder = await importNavigationOrder()
+
+  // set the paths property config
+  const paths = navOrder.map(({ navigation_group }) => ({
+    params: {
+      folder: string_to_slug(navigation_group),
+    },
+  }))
+
+  // return the required configurations
+  return {
+    paths,
+    fallback: false,
   }
 }

@@ -1,5 +1,6 @@
 import matter from "gray-matter"
 
+// GENERATE THE NAVIGATION CONFIG
 export async function generateNavigationConfig() {
   // import in the navigation config
   const navigationConfigData = await import(`../content/navigation/navigation.json`)
@@ -34,7 +35,7 @@ export async function generateNavigationConfig() {
   return navigationConfig
 }
 
-// utility
+// TRANSFORM A STRING TO A SLUG
 export function string_to_slug(str) {
   str = str.replace(/^\s+|\s+$/g, "") // trim
   str = str.toLowerCase()
@@ -52,4 +53,20 @@ export function string_to_slug(str) {
     .replace(/-+/g, "-") // collapse dashes
 
   return str
+}
+
+// IMPORT MARKDOWN DATA
+export async function importMarkdownData(filePath) {
+  const fileData = await import(filePath)
+  console.log(fileData.default)
+  const { data, content } = matter(fileData.default)
+  return { data, content }
+}
+
+// IMPORT NAVIGATION ORDER
+export async function importNavigationOrder() {
+  // import in the navigation config
+  const navigationOrder = await import(`../content/navigation/navigation.json`)
+  // return the nested data
+  return navigationOrder.default.navigation_order
 }

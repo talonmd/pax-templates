@@ -10,7 +10,7 @@ import PageContent from "../../components/PageContent"
 export default function Dashboard() {
   const [currentPage, setCurrentPage] = useState("YOUR_TOOLS")
   return (
-    <Layout headline="Hello there, Username" cookieTrail={[]} imagePath="">
+    <Layout attributes={frontmatter} pageNav={navigationConfig} addNetlifyIdentityScript>
       <PageNavigation>
         <ul>
           <li

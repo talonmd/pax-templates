@@ -1,10 +1,10 @@
 import Link from "next/link"
 
-import matter from "gray-matter"
-
 import ReactMarkdown from "react-markdown"
 
-import Layout from "../../layout/Layout"
+import Layout from "../../../layout/Layout"
+
+import { importMarkdownData } from "../../../util/util.js"
 
 export default function BlogPost({ frontmatter, content }) {
   console.log("FRONTMATTER:", frontmatter)
@@ -29,8 +29,7 @@ export async function getStaticProps({ ...ctx }) {
   const { post } = ctx.params
 
   // import the content and data from the post
-  const fileData = await import(`../../content/posts/${post}.md`)
-
+  const fileData = await import(`../../../content//posts/${post}.md`)
   const { data, content } = matter(fileData.default)
 
   // return the post data as a prop
@@ -57,7 +56,7 @@ export async function getStaticPaths() {
 
     // return the array of slugs
     return data
-  })(require.context("../../content/posts", true, /\.md$/))
+  })(require.context("../../../content/posts", true, /\.md$/))
 
   // set the paths property
   const paths = blogSlugs.map((slug) => `/blog/${slug}`)
