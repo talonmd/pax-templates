@@ -196,6 +196,33 @@ collections:
                   - "name"
                 value_field: "{{name}} | {{slug}}"
 
+  - name: "navigation"
+    label: "Navigation"
+    label_singular: "Navigation Group"
+    folder: "content/navigation"
+    identifier_field: name
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - label: "Pages"
+        label_singular: "Page"
+        name: "pages"
+        widget: "list"
+        fields:
+          - label: "Page"
+            name: "page"
+            widget: "relation"
+            collapsed: true
+            collection: "pages"
+            options_length: 100
+            search_fields:
+              - "name"
+            display_fields:
+              - "name"
+            value_field: "name"
+
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
