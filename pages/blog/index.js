@@ -38,6 +38,7 @@ export async function getStaticProps() {
 
   // import the content and data of the blog page
   const fileData = await import(`../../content/pages/blog.md`)
+
   const { data, content } = matter(fileData.default)
 
   // return the posts array and page content as props

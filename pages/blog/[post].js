@@ -1,43 +1,45 @@
 import Link from "next/link"
+
 import matter from "gray-matter"
+
 import ReactMarkdown from "react-markdown"
 
-//import Layout from "../../components/Layout"
+import Layout from "../../layout/Layout"
 
-export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
-  if (!frontmatter) return <></>
-
+export default function BlogPost({ frontmatter, content }) {
+  console.log("FRONTMATTER:", frontmatter)
   return (
-    <div>
-      <Link href="/rules">
+    <Layout attributes={frontmatter}>
+      <Link href="/blog">
         <a>Back to post list</a>
       </Link>
       <article>
         <h1>{frontmatter.title}</h1>
         <p>By {frontmatter.author}</p>
         <div>
-          <ReactMarkdown>{markdownBody}</ReactMarkdown>
+          <ReactMarkdown children={content} />
         </div>
       </article>
-    </div>
+    </Layout>
   )
 }
 
 export async function getStaticProps({ ...ctx }) {
+  // pull the slug from query params
   const { post } = ctx.params
 
-  const content = await import(`../../content/posts/${post}.md`)
-  const config = await import(`../../siteconfig.json`)
+  console.log(post)
 
-  const data = matter(content.default)
+  // import the content and data from the post
+  const fileData = await import(`../../content/posts/${post}.md`)
 
-  console.log(data)
+  const { data, content } = matter(fileData.default)
 
+  // return the post data as a prop
   return {
     props: {
-      siteTitle: config.title,
-      frontmatter: data.data,
-      markdownBody: data.content,
+      frontmatter: data,
+      content,
     },
   }
 }
