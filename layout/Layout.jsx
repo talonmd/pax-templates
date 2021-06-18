@@ -11,7 +11,14 @@ import PageNavigation from "../components/PageNavigation"
 import PageContent from "../components/PageContent"
 import Footer from "../components/Footer"
 
-const Layout = ({ children, attributes, pageNav, isLoggedIn, addNetlifyIdentityScript }) => {
+const Layout = ({
+  children,
+  attributes,
+  navigationConfig,
+  pageNav,
+  isLoggedIn,
+  addNetlifyIdentityScript,
+}) => {
   if (!attributes) return <>broken</>
   const { date, name, page_headline, seo, slug, hero_banner } = attributes
   return (
@@ -36,7 +43,7 @@ const Layout = ({ children, attributes, pageNav, isLoggedIn, addNetlifyIdentityS
       {seo ? <NextSeo title={seo.title} description={seo.description} /> : null}
       <div className="layout">
         <Header isLoggedIn={isLoggedIn} />
-        <Navigation />
+        <Navigation navigationConfig={navigationConfig} />
         <PageHero imagePath={hero_banner ? hero_banner : null} />
         <PageHeader headline={page_headline} />
         {pageNav ? (

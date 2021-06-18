@@ -1,15 +1,12 @@
 import Link from "next/link"
 
-const NestedNavigationList = ({ filePath, listItems }) => (
+const NestedNavigationList = ({ folderSlug, pages }) => (
   <ul className="navigation__list--nested">
-    {listItems.map(({ page }, index) => {
-      // page is retured as a string "Page Title | page-slug"
-      // split on the ' | ' to get the page tile and slug separately
-      const data = page.split(" | ")
+    {pages.map((page, index) => {
       return (
-        <Link key={index} href={`/${filePath}/${data[1]}`}>
+        <Link key={index} href={`/${folderSlug}/${page.slug}`}>
           <li className="navigation__item--nested">
-            <a className="navigation__link--nested">{data[0]}</a>
+            <a className="navigation__link--nested">{page.name}</a>
           </li>
         </Link>
       )
