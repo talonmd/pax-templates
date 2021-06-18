@@ -1,5 +1,5 @@
 ---
-name: Explore Avarice
+name: Digital Tools
 pages:
   - page: Avarice Sheets
   - page: Avarice TableTop
