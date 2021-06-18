@@ -28,8 +28,6 @@ export async function getStaticProps({ ...ctx }) {
   // pull the slug from query params
   const { post } = ctx.params
 
-  console.log(post)
-
   // import the content and data from the post
   const fileData = await import(`../../content/posts/${post}.md`)
 

@@ -1,6 +1,6 @@
 import Layout from "../layout/Layout"
 
-import { attributes, react as HomeContent } from "../content/pages/home.md"
+//import { attributes, react as HomeContent } from "../content/pages/home.md"
 import navigationConfig from "../content/settings/navigation.json"
 
 export default function Home({ isLoggedIn }) {
