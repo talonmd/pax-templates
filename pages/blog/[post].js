@@ -45,18 +45,26 @@ export async function getStaticProps({ ...ctx }) {
 }
 
 export async function getStaticPaths() {
+  // loop through all the files in the posts directory with an IFE
   const blogSlugs = ((context) => {
     const keys = context.keys()
+
+    // generate slugs
     const data = keys.map((key, index) => {
       let slug = key.replace(/^.*[\\\/]/, "").slice(0, -3)
 
+      // return slug for each file
       return slug
     })
+
+    // return the array of slugs
     return data
   })(require.context("../../content/posts", true, /\.md$/))
 
+  // set the paths property
   const paths = blogSlugs.map((slug) => `/blog/${slug}`)
 
+  // return the required configurations
   return {
     paths,
     fallback: false,
