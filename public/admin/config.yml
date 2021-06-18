@@ -205,12 +205,12 @@ collections:
     editor:
       preview: false
     fields:
-      - label: "Page"
-        name: "page"
+      - label: "Name"
+        name: "name"
         widget: "relation"
         collapsed: true
         collection: "pages"
-        hint: "This will also be the name of the group."
+        hint: "This will be the name of the group, and the page that it links to."
         options_length: 100
         search_fields:
           - "name"
