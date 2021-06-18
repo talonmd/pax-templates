@@ -25,16 +25,16 @@ collections:
         label: "Navigation"
         file: "/content/navigation/navigation.json"
         fields:
-          - label: "Navigation Order"
-            label_singular: "Navigation Groups"
+          - label: "Navigation Groups"
+            label_singular: "Navigation Group"
             name: "navigation_order"
+            hint: "This sets the order of the Navigation Groups."
             widget: "list"
             fields:
               - label: "Navigation Group"
                 name: "navigation_group"
                 widget: "relation"
                 collapsed: true
-                hint: "This sets the order of the Navigation Groups."
                 collection: "navigation"
                 search_fields:
                   - "name"
