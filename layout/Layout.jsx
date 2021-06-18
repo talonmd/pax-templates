@@ -12,6 +12,7 @@ import PageContent from "../components/PageContent"
 import Footer from "../components/Footer"
 
 const Layout = ({ children, attributes, pageNav, isLoggedIn, addNetlifyIdentityScript }) => {
+  if (!attributes) return <>broken</>
   const { date, name, page_headline, seo, slug, hero_banner } = attributes
   return (
     <>
