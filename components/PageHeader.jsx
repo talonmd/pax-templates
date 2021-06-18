@@ -5,7 +5,7 @@ const PageHeader = ({ headline, cookieTrail }) => {
   return (
     <div className="page-header">
       <h1 className="page-header__headline">{headline}</h1>
-      <div className="page-header__breadcrumb-box">
+      {/* <div className="page-header__breadcrumb-box">
         <ul className="page-header__breadcrumb-list">
           {cookieTrail.map(({ name, path }, index) => (
             <li className="page-header__breadcrumb-item" key={index}>
@@ -15,7 +15,7 @@ const PageHeader = ({ headline, cookieTrail }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   )
 }

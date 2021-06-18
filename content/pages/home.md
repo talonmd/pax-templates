@@ -6,7 +6,7 @@ seo:
   title: Avarice | A dead-simple, thrilling, futuristic table top RPG
   description: Avarice is a simple, fast to learn table top RPG game created by
     Sodalite Games.
-page-headline: Enter the World of Avarice
+page_headline: Enter the World of Avarice
 ---
 
 Meatball landjaeger turkey hamburger cow flank boudin salami short ribs ham ground round meatloaf kevin rump. Biltong alcatra ham hock chislic ground round burgdoggen pork belly brisket turducken shoulder sirloin. Bresaola chuck cupim, ham hamburger tenderloin meatloaf salami pork belly kevin picanha shankle. Tail rump flank pork jowl ham pork chop.
