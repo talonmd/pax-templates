@@ -32,7 +32,7 @@ const Layout = ({ children, attributes, pageNav, isLoggedIn, addNetlifyIdentityS
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         ) : null}
       </Head>
-      <NextSeo title={seo.title} description={seo.description} />
+      {seo ? <NextSeo title={seo.title} description={seo.description} /> : null}
       <div className="layout">
         <Header isLoggedIn={isLoggedIn} />
         <Navigation />
