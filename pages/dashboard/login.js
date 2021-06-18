@@ -11,6 +11,9 @@ export default function Login() {
   return (
     <>
       <div className="sign-in-and-sign-up">
+        <span className="sign-in-and-sign-up__back-to-site">
+          <Link href="/">&larr; back to avaricegame.com</Link>
+        </span>
         <div className="sign-in-and-sign-up__header">
           <AvariceLogo className="sign-in-and-sign-up__header-logo" />
         </div>
@@ -20,6 +23,12 @@ export default function Login() {
             Already have an account?{" "}
             <Link href="/dashboard/register">
               <span className="sign-in-and-sign-up__form-footer-link">Sign in.</span>
+            </Link>
+          </p>
+          <p className="sign-in-and-sign-up__form-footer-text">
+            Don't have an account?{" "}
+            <Link href="/dashboard/register">
+              <span className="sign-in-and-sign-up__form-footer-link"> Sign up.</span>
             </Link>
           </p>
         </div>

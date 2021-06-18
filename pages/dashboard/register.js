@@ -11,6 +11,9 @@ export default function Register() {
   return (
     <>
       <div className="sign-in-and-sign-up">
+        <span className="sign-in-and-sign-up__back-to-site">
+          <Link href="/">&larr; back to avaricegame.com</Link>
+        </span>
         <div className="sign-in-and-sign-up__header">
           <AvariceLogo className="sign-in-and-sign-up__header-logo" />
         </div>
@@ -18,7 +21,7 @@ export default function Register() {
           <SignUp />
           <p className="sign-in-and-sign-up__form-footer-text">
             Already have an account?{" "}
-            <Link href="/dashboard/register">
+            <Link href="/dashboard/login">
               <span className="sign-in-and-sign-up__form-footer-link">Sign in.</span>
             </Link>
           </p>
