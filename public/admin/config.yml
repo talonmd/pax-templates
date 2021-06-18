@@ -26,6 +26,7 @@ collections:
         file: "/content/navigation/navigation.json"
         fields:
           - label: "Navigation Order"
+            label_singular: "Navigation Groups"
             name: "navigation_order"
             widget: "list"
             fields:
