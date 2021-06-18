@@ -205,7 +205,19 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - label: "Page"
+        name: "page"
+        widget: "relation"
+        collapsed: true
+        collection: "pages"
+        hint: "This will also be the name of the group."
+        options_length: 100
+        search_fields:
+          - "name"
+        display_fields:
+          - "name"
+        value_field: "name"
+
       - label: "Pages"
         label_singular: "Page"
         name: "pages"
