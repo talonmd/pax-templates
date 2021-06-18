@@ -1,7 +1,7 @@
 ---
 name: About Avarice
 slug: about-avarice
-date: 2021-06-18T06:58:27.275Z
+date: 2021-06-18
 seo:
   title: About Avarice
 page_headline: About Avarice
