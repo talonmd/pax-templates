@@ -1,25 +1,25 @@
 import Link from "next/link"
 import Head from "next/head"
 
+import { NextSeo } from "next-seo"
+
 import Layout from "../layout/Layout"
 import PageNavigation from "../components/PageNavigation"
 import PageContent from "../components/PageContent"
 
 import { attributes, react as HomeContent } from "../content/pages/home.md"
+import navigationConfig from "../content/settings/navigation.json"
 
 export default function Home({ isLoggedIn }) {
-  let { title, cats } = attributes
+  const { date, name, page_headline, seo, slug } = attributes
+  const { get_started, rules, explore_avarice, digital_tools, community } = navigationConfig
   return (
     <>
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-      <Layout
-        headline="Enter the world of Avarice"
-        cookieTrail={[]}
-        imagePath=""
-        isLoggedIn={isLoggedIn}
-      >
+      <NextSeo title={seo.title} description={seo.description} />
+      <Layout headline={page_headline} cookieTrail={[]} imagePath="" isLoggedIn={isLoggedIn}>
         <PageNavigation>
           <ul>
             <li>Get Started</li>
@@ -59,20 +59,7 @@ export default function Home({ isLoggedIn }) {
           </ul>
         </PageNavigation>
         <PageContent>
-          <h2>Main Content Headline</h2>
-
-          <article>
-            <h1>{title}</h1>
-            <HomeContent />
-            <ul>
-              {cats.map((cat, k) => (
-                <li key={k}>
-                  <h2>{cat.name}</h2>
-                  <p>{cat.description}</p>
-                </li>
-              ))}
-            </ul>
-          </article>
+          <HomeContent />
         </PageContent>
       </Layout>
     </>
