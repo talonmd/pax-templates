@@ -1,27 +1,38 @@
-import Layout from "../layout/Layout"
-import PageNavigation from "../components/PageNavigation"
-import PageContent from "../components/PageContent"
+import matter from "gray-matter"
 
-export default () => {
-  return (
-    <Layout headline="Rules" cookieTrail={[{ name: "Rules", path: "/rules" }]} imagePath="">
-      <PageNavigation>
-        <ul>
-          <li>Player Rules</li>
-          <ul>
-            <li>Section #1</li>
-            <li>Section #2</li>
-          </ul>
-          <li>CC Rules</li>
-          <ul>
-            <li>Section #1</li>
-            <li>Section #2</li>
-          </ul>
-        </ul>
-      </PageNavigation>
-      <PageContent>
-        <h2>Main Content Headline</h2>
-      </PageContent>
-    </Layout>
-  )
+import PostList from "../components/blog/PostList"
+
+const Index = ({ posts, title, description, ...props }) => {
+  return <PostList posts={posts} />
+}
+
+export default Index
+
+export async function getStaticProps() {
+  const configData = await import(`../siteConfig.json`)
+
+  const posts = ((context) => {
+    const keys = context.keys()
+    const values = keys.map(context)
+
+    const data = keys.map((key, index) => {
+      let slug = key.replace(/^.*[\\\/]/, "").slice(0, -3)
+      const value = values[index]
+      const document = matter(value.default)
+      return {
+        frontmatter: document.data,
+        markdownBody: document.content,
+        slug,
+      }
+    })
+    return data
+  })(require.context("../content/posts", true, /\.md$/))
+
+  return {
+    props: {
+      posts,
+      title: configData.default.title,
+      description: configData.default.description,
+    },
+  }
 }
