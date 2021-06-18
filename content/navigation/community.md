@@ -5,6 +5,7 @@ pages:
   - page: Forum
   - page: Newsletter
   - page: Discord
-  - page: About Avarice
+  - page: Social Media
+  - page: Writers Guild
   - page: Help & Support
 ---
