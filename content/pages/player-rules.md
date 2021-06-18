@@ -1,7 +1,7 @@
 ---
 name: Player Rules
 slug: player-rules
-date: 2021-06-17T00:01:19.746Z
+date: 2021-06-18
 page_headline: Player Rules
 ---
 

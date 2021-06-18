@@ -1,7 +1,8 @@
 ---
 name: Writers Guild
 slug: writers-guild
-date: 2021-06-18T05:34:39.649Z
+date: 2021-06-18
 page_headline: Writers Guild
 ---
+
 writers guild

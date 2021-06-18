@@ -1,7 +1,7 @@
 ---
 name: Discord
 slug: discord
-date: 2021-06-17T00:05:15.135Z
+date: 2021-06-18
 page_headline: Discord
 ---
 

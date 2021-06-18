@@ -1,7 +1,7 @@
 ---
 name: Ebooks
 slug: ebooks
-date: 2021-06-17T00:02:49.458Z
+date: 2021-06-18
 page_headline: Ebooks
 ---
 

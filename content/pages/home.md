@@ -1,7 +1,7 @@
 ---
 name: Home
 slug: /
-date: 2019-03-17T19:31:20.591Z
+date: 2021-06-18
 seo:
   title: Avarice | A dead-simple, thrilling, futuristic table top RPG
   description: Avarice is a simple, fast to learn table top RPG game created by

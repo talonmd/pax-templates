@@ -1,7 +1,7 @@
 ---
 name: Map
 slug: map
-date: 2021-06-17T00:26:36.361Z
+date: 2021-06-18
 page_headline: Map
 ---
 
