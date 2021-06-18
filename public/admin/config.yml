@@ -15,7 +15,7 @@ public_folder: /images/uploads
 
 collections:
   # site config and blog post meta info
-  - name: "site-settings"
+  - name: "site_settings"
     label: "Site Settings"
     delete: false
     editor:
@@ -23,89 +23,23 @@ collections:
     files:
       - name: "navigation"
         label: "Navigation"
-        file: "/content/settings/navigation.json"
+        file: "/content/navigation/navigation.json"
         fields:
-          - label: "Get Started"
-            label_singular: "Page"
-            name: "get_started"
+          - label: "Navigation Order"
+            name: "navigation_order"
             widget: "list"
             fields:
-              - label: "Page"
-                name: "page"
+              - label: "Navigation Group"
+                name: "navigation_group"
                 widget: "relation"
                 collapsed: true
-                collection: "pages"
+                hint: "This sets the order of the Navigation Groups."
+                collection: "navigation"
                 search_fields:
                   - "name"
-                  - "slug"
                 display_fields:
                   - "name"
-                value_field: "{{name}} | {{slug}}"
-          - label: "Rules"
-            label_singular: "Page"
-            name: "rules"
-            widget: "list"
-            fields:
-              - label: "Page"
-                name: "page"
-                widget: "relation"
-                collapsed: true
-                collection: "pages"
-                search_fields:
-                  - "name"
-                  - "slug"
-                display_fields:
-                  - "name"
-                value_field: "{{name}} | {{slug}}"
-          - label: "Explore Avarice"
-            label_singular: "Page"
-            name: "explore_avarice"
-            hint: "You will only be able to select pages created under 'Explore Avarice'"
-            widget: "list"
-            fields:
-              - label: "Page"
-                name: "page"
-                widget: "relation"
-                collapsed: true
-                collection: "explore_avarice"
-                search_fields:
-                  - "name"
-                  - "slug"
-                display_fields:
-                  - "name"
-                value_field: "{{name}} | {{slug}}"
-          - label: "Digital Tools"
-            label_singular: "Page"
-            name: "digital_tools"
-            widget: "list"
-            fields:
-              - label: "Page"
-                name: "page"
-                widget: "relation"
-                collapsed: true
-                collection: "pages"
-                search_fields:
-                  - "name"
-                  - "slug"
-                display_fields:
-                  - "name"
-                value_field: "{{name}} | {{slug}}"
-          - label: "Community"
-            label_singular: "Page"
-            name: "community"
-            widget: "list"
-            fields:
-              - label: "Page"
-                name: "page"
-                widget: "relation"
-                collapsed: true
-                collection: "pages"
-                search_fields:
-                  - "name"
-                  - "slug"
-                display_fields:
-                  - "name"
-                value_field: "{{name}} | {{slug}}"
+                value_field: "name"
 
       - name: "explore_avarice_navigation"
         label: "Explore Avarice Navigation"
