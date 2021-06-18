@@ -4,8 +4,6 @@ import ReactMarkdown from "react-markdown"
 
 import Layout from "../../layout/Layout"
 
-let FOLDER
-
 export default function Page({ frontmatter, content }) {
   console.log("FRONTMATTER:", frontmatter)
   return (
@@ -18,12 +16,6 @@ export default function Page({ frontmatter, content }) {
 export async function getStaticProps({ ...ctx }) {
   // pull the slugs from query params
   const { folder, page } = ctx.params
-
-  console.log("FOLDER", folder)
-
-  FOLDER = folder
-
-  console.log("new folder", FOLDER)
 
   // import the content and data from the page
   const fileData = await import(`../../content/pages/${page}.md`)
@@ -51,38 +43,33 @@ export async function getStaticPaths() {
     return string_to_slug(obj.navigation_group)
   })
 
-  const folderConfigs = await Promise.all(
+  // map through the navigation group configurations to
+  // build out the urls of all the paths
+  const foldersPageSlugs = await Promise.all(
     folderNames.map(async (folderName) => {
+      // pull in the data from the config md file
       const fileData = await import(`../../content/navigation/${folderName}.md`)
 
       const { data } = matter(fileData.default)
 
+      // create the paths object for each page path
       const pageSlugs = data.pages.map(({ page }) => {
         return { params: { folder: folderName, page: string_to_slug(page) } }
       })
 
-      console.log(pageSlugs)
-
+      // return the object
       return pageSlugs
     })
   )
 
-  console.log("FOLDER CONFIGS", folderConfigs)
+  let paths = []
 
-  let combined = []
-
-  folderConfigs.forEach((folderConfig) => (combined = [...combined, ...folderConfig]))
-
-  console.log(combined)
-
-  // set the paths property
-  //const paths = pageSlugs.map((slug) => `/${FOLDER}/${slug}`)
-
-  //console.log(paths)
+  // spread in each folder array into one main array
+  foldersPageSlugs.forEach((pageSlugs) => (paths = [...paths, ...pageSlugs]))
 
   // return the required configurations
   return {
-    paths: combined,
+    paths,
     fallback: false,
   }
 }
