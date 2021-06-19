@@ -24,6 +24,7 @@ export async function getStaticProps({ ...ctx }) {
 
   const { data, content } = matter(fileData.default)
 
+  // generate the navigation config
   const navigationConfig = await generateNavigationConfig()
 
   // return the page data as a prop

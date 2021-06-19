@@ -4,12 +4,12 @@ import ReactMarkdown from "react-markdown"
 
 import Layout from "../../layout/Layout"
 
-import { string_to_slug, importMarkdownData } from "../../util/util.js"
+import { string_to_slug, importNavigationOrder, generateNavigationConfig } from "../../util/util.js"
 
-export default function IndexPage({ frontmatter, content }) {
+export default function IndexPage({ navigationConfig, frontmatter, content }) {
   console.log("FRONTMATTER:", frontmatter)
   return (
-    <Layout attributes={frontmatter} pageNav>
+    <Layout attributes={frontmatter} pageNav navigationConfig={navigationConfig}>
       <ReactMarkdown children={content} />
     </Layout>
   )
@@ -24,9 +24,13 @@ export async function getStaticProps({ ...ctx }) {
 
   const { data, content } = matter(fileData.default)
 
+  // generate the navigation config
+  const navigationConfig = await generateNavigationConfig()
+
   // return the page data as a prop
   return {
     props: {
+      navigationConfig,
       frontmatter: data,
       content,
     },
@@ -35,11 +39,8 @@ export async function getStaticProps({ ...ctx }) {
 
 export async function getStaticPaths() {
   // import in the navigation config
-  const navigationConfig = await import(`../../content/navigation/navigation.json`)
-  // destructure the data needed
-  const {
-    default: { navigation_order },
-  } = navigationConfig
+  const navigation_order = await importNavigationOrder()
+
   // map that array into an array of folder slugs that
   // is configured how it need to be for returning paths
   const paths = navigation_order.map((obj) => {

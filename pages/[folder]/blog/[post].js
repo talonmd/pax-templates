@@ -4,12 +4,12 @@ import ReactMarkdown from "react-markdown"
 
 import Layout from "../../../layout/Layout"
 
-import { importMarkdownData } from "../../../util/util.js"
+import { generateNavigationConfig } from "../../../util/util.js"
 
-export default function BlogPost({ frontmatter, content }) {
+export default function BlogPost({ navigationConfig, frontmatter, content }) {
   console.log("FRONTMATTER:", frontmatter)
   return (
-    <Layout attributes={frontmatter}>
+    <Layout attributes={frontmatter} navigationConfig={navigationConfig}>
       <Link href="/blog">
         <a>Back to post list</a>
       </Link>
@@ -32,9 +32,13 @@ export async function getStaticProps({ ...ctx }) {
   const fileData = await import(`../../../content//posts/${post}.md`)
   const { data, content } = matter(fileData.default)
 
+  // generate the navigation config
+  const navigationConfig = await generateNavigationConfig()
+
   // return the post data as a prop
   return {
     props: {
+      navigationConfig,
       frontmatter: data,
       content,
     },

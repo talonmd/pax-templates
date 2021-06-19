@@ -55,14 +55,6 @@ export function string_to_slug(str) {
   return str
 }
 
-// IMPORT MARKDOWN DATA
-export async function importMarkdownData(filePath) {
-  const fileData = await import(filePath)
-  console.log(fileData.default)
-  const { data, content } = matter(fileData.default)
-  return { data, content }
-}
-
 // IMPORT NAVIGATION ORDER
 export async function importNavigationOrder() {
   // import in the navigation config

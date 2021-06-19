@@ -46,6 +46,7 @@ export async function getStaticProps() {
   const fileData = await import(`../../../content/pages/blog.md`)
   const { data, content } = matter(fileData.default)
 
+  // generate the navigation config
   const navigationConfig = await generateNavigationConfig()
 
   // return the posts array and page content as props

@@ -42,6 +42,7 @@
     }
     &--nested {
       list-style-type: none;
+      margin-top: 0;
     }
   }
   &__item {
@@ -49,18 +50,20 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 0.8rem 1rem;
-    margin: 1rem 0;
+    padding: 1.8rem 1rem;
+    margin: 0;
     &:hover {
       background-color: lighten($color-black, 15%);
+      color: $color-white;
     }
     &--nested {
       border-left: 0.8rem solid $color-grey-dark-1;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       cursor: pointer;
       margin: 0.2rem 0;
       &:hover {
         background-color: $color-grey-dark-1;
+        color: $color-white;
       }
     }
   }
@@ -76,6 +79,9 @@
     width: 100%;
     height: 100%;
     padding: 1rem 0.5rem;
+    &:hover {
+      color: $color-white;
+    }
     &--nested {
       text-decoration: none;
       color: $color-white;
@@ -84,6 +90,9 @@
       margin-left: 2.5rem;
       letter-spacing: 0.1rem;
       font-family: "Carrois Gothic SC", sans-serif;
+      &:hover {
+        color: $color-white;
+      }
     }
   }
   &__icon {

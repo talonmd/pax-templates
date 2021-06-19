@@ -17,15 +17,15 @@ const Navigation = ({ navigationConfig }) => {
         &#9776;
       </span>
       <ul className="navigation__list">
-        {navigationConfig.map(({ folder, pages }) => (
-          <>
-            <Link href={`/${folder.slug}`}>
+        {navigationConfig.map(({ folder, pages }, index) => (
+          <Link key={index} href={`/${folder.slug}`}>
+            <>
               <li className="navigation__item">
                 <a className="navigation__link">{folder.name}</a>
               </li>
-            </Link>
-            <NestedNavigationList filePath="get-started" folderSlug={folder.slug} pages={pages} />
-          </>
+              <NestedNavigationList filePath="get-started" folderSlug={folder.slug} pages={pages} />
+            </>
+          </Link>
         ))}
       </ul>
     </nav>

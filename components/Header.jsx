@@ -3,7 +3,9 @@ import Link from "next/link"
 
 import AvariceLogo from "../assets/AvariceLogo"
 
-const Header = ({ isLoggedIn }) => {
+const Header = () => {
+  const isLoggedIn = false
+
   return (
     <header className="header">
       <Link href="/">
@@ -15,7 +17,7 @@ const Header = ({ isLoggedIn }) => {
       <div className="header__right-side">
         <input type="text" className="header__search-bar-input" placeholder="search..." />
         {/* TO DO - add a search icon here */}
-        {true ? (
+        {isLoggedIn ? (
           <Link href="/dashboard">
             <button className="button button-black">
               My Dashboard
@@ -24,10 +26,10 @@ const Header = ({ isLoggedIn }) => {
           </Link>
         ) : (
           <>
-            <Link href="/dasboard/register">
+            <Link href="/dashboard/register">
               <button className="button button-black">Join Avarice</button>
             </Link>
-            <Link href="/dasboard/login">
+            <Link href="/dashboard/login">
               <button className="button button-outline button-black">Sign In</button>
             </Link>
           </>

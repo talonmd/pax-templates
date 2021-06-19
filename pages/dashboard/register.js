@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Head from "next/head"
 
+import { useRouter } from "next/router"
+
 import { useState } from "react"
 
 import AvariceLogo from "../../assets/AvariceLogo"
@@ -8,11 +10,12 @@ import AvariceLogo from "../../assets/AvariceLogo"
 import SignUp from "../../components/dashboard/sign-up-form"
 
 export default function Register() {
+  const router = useRouter()
   return (
     <>
       <div className="sign-in-and-sign-up">
         <span className="sign-in-and-sign-up__back-to-site">
-          <Link href="/">&larr; back to avaricegame.com</Link>
+          <span onClick={() => router.back()}>&larr; back to avaricegame.com</span>
         </span>
         <div className="sign-in-and-sign-up__header">
           <AvariceLogo className="sign-in-and-sign-up__header-logo" />
