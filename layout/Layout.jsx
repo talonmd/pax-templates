@@ -11,16 +11,7 @@ import PageNavigation from "../components/PageNavigation"
 import PageContent from "../components/PageContent"
 import Footer from "../components/Footer"
 
-const Layout = ({
-  children,
-  attributes,
-  navigationConfig,
-  pageNav,
-  isLoggedIn,
-  addNetlifyIdentityScript,
-}) => {
-  if (!attributes) return <>broken</>
-  const { date, name, page_headline, seo, slug, hero_banner } = attributes
+const Layout = ({ children, attributes, navigationConfig, pageNav, addNetlifyIdentityScript }) => {
   if (!navigationConfig) navigationConfig = []
   return (
     <>
@@ -41,12 +32,18 @@ const Layout = ({
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         ) : null}
       </Head>
-      {seo ? <NextSeo title={seo.title} description={seo.description} /> : null}
+      {attributes && attributes.seo ? (
+        <NextSeo title={attributes.seo.title} description={attributes.seo.description} />
+      ) : null}
       <div className="layout">
-        <Header isLoggedIn={isLoggedIn} />
+        <Header />
         <Navigation navigationConfig={navigationConfig} />
-        <PageHero imagePath={hero_banner ? hero_banner : null} />
-        <PageHeader headline={page_headline} />
+        <PageHero
+          imagePath={attributes && attributes.hero_banner ? attributes.hero_banner : null}
+        />
+        <PageHeader
+          headline={attributes && attributes.page_headline ? attributes.page_headline : null}
+        />
         {pageNav ? (
           <PageNavigation>
             <ul>
